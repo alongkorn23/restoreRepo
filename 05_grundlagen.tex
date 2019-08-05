@@ -235,4 +235,70 @@ Um dieses Problem zu lösen, wurde deshalb der Kommunikationsstandard namens Web
 
 \subsection{WebSocket}
 \label{sec:websocket}
+WebSocket wurde 2008 entwickelt. \glqq Chrome war 2009 der erste Browser, der WebSocket unterstützte; nach und nach folgten alle großen Wettbewerber. Seit 2011 ist WebSocket ein W3C\footnote{World Wide Web Consortium}-Standard.\grqq{} \cite{webSocket} \bigskip
+
+WebSocket ist ein bidirektionaler und vollduplexer Kommunikationsstandard, der entwickelt wurde, \glqq[...] um eine bidirektionale Verbindung zwischen einer Webanwendung und einem WebSocket-Server bzw. einem Webserver, der auch WebSockets unterstützt, herzustellen.\grqq{} \cite{Wiki2019}\bigskip
+
+Mit WebSocket werden Daten in beide Richtungen über einen Kommunikationskanal übertragen. Client und Server können gleichzeitig miteinander \glqq reden\grqq{}, sobald eine WebSocket-Verbindung besteht. WebSocket verwendet den gleichen Port wie HTTP, nämlich den Port 80. Es wird dabei ein WebSocket-Protokoll namens \textbf {Handshake} benutzt, um die Verbindung zwischen Client und Server aufzubauen. (vgl. \cite{Matt2011})
+
+\newpage
+Das Handshake-Verfahren funktioniert wie folgt:\bigskip
+
+\textbf{Client:}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.6]{img/clientWebsocket}
+	\caption{Beispiel einer Client-Handshake-Anfrage}
+	\footnotesize\sffamily\textbf{Quelle:} \url{https://www.heise.de/developer/artikel/WebSocket-Annaeherung-an-Echtzeit-im-Web-1260189.html?seite=all} 
+	\label{fig:clientWebsocket}
+  \end{center}   
+\end{figure}
+
+Im Prinzip ist es ein Aufsatz, der praktisch auf dem HTTP-Protokoll läuft. Wie in der \textbf{Abbildung \ref{fig:clientWebsocket}} zu sehen ist, schickt der Client eine normale GET-Anfrage an den Server und sagt dementsprechend auf der Serverseite, was er genau haben will. Mit dem \textbf{Upgrade} sagt der Client, dass er auf das WebSocket-Protokoll wechseln möchte. Dafür wird für den Verbindungsaufbau einen \textbf{Sec-WebSocket-Key} zum Server übermittelt. Bei diesem Key handelt es sich um eine Base64-encodierte Zeichenkette, welche vom Server benutzt wird, um den Verbindungsaufbau zu akzeptieren. (vgl. \cite{Matt2011})\bigskip
+
+\textbf{WebSocket-Server:}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.6]{img/serverWebsocket}
+	\caption{WebSocket-Server Handshake}
+	\footnotesize\sffamily\textbf{Quelle:} \url{https://www.heise.de/developer/artikel/WebSocket-Annaeherung-an-Echtzeit-im-Web-1260189.html?seite=all} 
+	\label{fig:serverWebsocket}
+  \end{center}   
+\end{figure}
+
+Der WebSocket-Server (\textbf{Abbildung \ref{fig:serverWebsocket}}) bearbeitet die Anfrage und antwortet mit dem HTTP-Status\- code 101 Switching Protocols. Dabei liefert er dem Client die Informationen mit, dass er das Upgrade akzeptiert hat (\textbf{Sec-WebSocket-Accept}). (vgl. \cite{Matt2011})
+
+\newpage
+\par
+\begingroup
+\leftskip=4em % Parameter anpassen
+\rightskip\leftskip
+\noindent \glqq Zusätzlich gibt der Server an, dass er das ‘superchat’-Protokoll kennt. Das hat den Vorteil, dass die Browseranwendung direkt gegen dieses Protokoll beziehungsweise diese API geschrieben wird, statt gegen die WebSocket-API. Entwickler, die mit der Programmierschnittstelle beziehungsweise dem anwendungsspezifischen Protokoll vertraut sind, brauchen keine neue API erlernen, um WebSocket-Anwendungen zu erstellen. Die clientseitige Schnittstelle des ‘superchat’-Protokolls kapselt die eigentliche Kommunikation mit dem WebSocket-Server.\grqq{} \cite{Matt2011}
+\par
+\endgroup
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.4]{img/webSocketHandshake}
+	\caption{Das WebSocket-Handshake}
+	\footnotesize\sffamily\textbf{Quelle:} \url{https://www.heise.de/developer/imgs/06/6/7/6/2/3/3/WebSocket-a70195c3f57b1308.png} 
+	\label{fig:webSocketHandshake}
+  \end{center}   
+\end{figure}
+
+Nach dem Handshake besteht eine persistente Verbindung zwischen Client und Server und beide können jederzeit mit dem Senden von Daten beginnen (\textbf{Abbildung \ref{fig:webSocketHandshake}}). Eine WebSocket-Verbindung erkennt man an das neue URL-Schema. Statt wie gewohnt das \glqq http:\grqq{} oder für sichere HTTP-Verbindungen das \glqq https:\grqq{} als Protokoll anzugeben, wird bei einer WebSocket-Verbindung das \glqq ws:\grqq{} verwenden. Für sichere Verbindungen steht das \glqq wss:\grqq{} zur Verfügung.\bigskip
+
+Zusammenfassend lässt sich sagen, dass WebSocket ein geeigneter Protokoll ist, um \bigskip
+
+\par
+\begingroup
+\leftskip=4em % Parameter anpassen
+\rightskip\leftskip
+\noindent \glqq [...] die komplexen Probleme des ‘Echtzeit-Web’, wie Latenz oder Netzverkehr, anzugehen. WebSocket wird jedoch nicht als ein ‘besseres AJAX’ entwickelt. Ebenfalls stellt WebSocket keinen 1:1-Ersatz für HTTP dar, sondern bietet vielmehr einen effizienten, bidirektionalen Kommunikationskanal an. Die Integration von ‘Echtzeit’ innerhalb von Webanwendungen ist nicht mehr an Hacks und Workarounds gebunden, sondern erfolgt auf Basis eines standardisierten, effizienten und bidirektionalen Protokolls. Wichtig ist hierbei, dass man sämtliche TCP/UDP-Protokolle auf Basis von WebSocket zum Browser bringen kann. Der Abstraktionsgrad zukünftiger Webanwendungen steht damit den Desktop-Anwendungen in nichts nach.\grqq{} \cite{Matt2011}
+
+\subsection{jQuery}
+\label{sec:jQuery}
+
 

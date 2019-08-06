@@ -418,3 +418,67 @@ Außerdem stellte O’Reilly sieben Merkmale vor, die kennzeichnend für Web 2.0
 \newpage
 \section{Rich Internet Applications}
 \label{sec:rich internet applications}
+Die klassischen Webanwendungen schicken generell die Formulareingabe vom Nutzer an einen Webserver. Als Rückgabe vom Webserver bekommt der Client, in diesem Fall der Webbrowser, eine neu generierte Webseite gemäß dem zuvor eingegebenen Daten. Bei jeder Anfrage des Clients wird die komplette Webseite neu generiert und übertragen. Demzufolge werden solche Webanwendungen als wenig intuitiv bezeichnet und kann auch nachteilig auf die Geschwindigkeit und schlechten User-Experience führen.\bigskip
+
+Außerdem bieten klassische Webanwendungen nicht genügend Funktionalitäten und Interaktionsmöglichkeiten auf der Benutzeroberfläche. Das hat zur Folge, dass sie gegenüber den Desktop-Anwendungen im Nachteil sind.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.6]{img/clientServerKommunikation}
+	\caption{Kommunikationsmodell einer klassischen Webanwendung}
+	\footnotesize\sffamily\textbf{Quelle:} \cite{Ban2008a}  
+	\label{fig:lientServerKommunikation}
+  \end{center}   
+\end{figure}
+
+RIAs (Rich Internet Applications) sind webbasierte Anwendungen, deren Funktionalitäten und Eigenschaften denen einer Desktop-Anwendungen entsprechen. RIAs erkennt man unter anderem daran, dass sie plattformunabhängig sowie über das Internet zugänglich sind, wobei RIAs auch offline Anwendungen bieten. Und sie sollten auch eine interaktive Benutzeroberfläche erzeugen können. Zu Interaktionsmöglichkeiten auf der Benutzeroberfläche zählen beispielsweise Drag-and-Drop-Fähigkeit oder Bedienbarkeit über Tastenkürzel.\bigskip
+
+Nach \cite{Lei2007a} unterscheidet sich die RIA-Technologie in zwei Kategorien:
+
+\begin{itemize}
+\item \textbf{rein Browser-basierte Anwendungen:}
+Der Client verwendet ausschließlich einen Browser. In dieser Kategorie laufen alle AJAX-Anwendungen ohne weitere Browser-Plugins.
+\item \textbf{in plugin-basierte und Stand-Alone-Anwendungen:}
+Auf der Clientseite werden weitere zusätzliche Laufzeitumgebungen (Flash oder Java) verwendet.
+\end{itemize}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.6]{img/RIA}
+	\caption{Kommunikationsmodell einer RIA am Beispiel einer AJAX-Anwendung}
+	\footnotesize\sffamily\textbf{Quelle:} \cite{Ban2008b}  
+	\label{fig:ria}
+  \end{center}   
+\end{figure}
+
+Die Vorteile der RIA gegenüber herkömmlichen Webanwendungen können nach \cite{Leif2007b} wie folgt beschrieben werden:
+
+\begin{itemize}
+\item \textbf{flüssigere Bedienung} im Vergleich zur herkömmlichen Webanwendungen, da nur notwendige Teile der GUI verändert werden.
+\item geringer Serverzugriff, da in RIAs \textbf{mehr Daten und Logik auf Clientseite} verarbeitet werden.
+\item geringer Serverzugriff und eine flüssigere Bedienung führen zu \textbf{weniger Netzwerklast.}
+\item \textbf{bekannte Benutzerschnittstelle,} da sie sich an Desktop-Anwendungen orientiert, ist für den Benutzer keine große Umgewöhnung.
+\item \textbf{einfacher Zugriff auf RIA,} da die Laufzeitumgebung, insbesonderer der Browser in den meisten Fällen auf den Clients bereits installiert ist.
+\item \textbf{offline-Funktionalität,} wenn die Programmlogik der konzipierte Anwendung auf Clientseite abläuft, kann das Programm auch komplett ohne Serverzugriff verwendet werden, sobald es einmal geladen ist. 
+\end{itemize}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.6]{img/desktop_web_ria_vergleich}
+	\caption{Vergleich der Desktopanwendung, klassischen Webanwendung und RIAs}
+	\footnotesize\sffamily\textbf{Quelle:} \cite{Boz2006}  
+	\label{fig:ria}
+  \end{center}   
+\end{figure}
+
+\section{Thick Client und Thin Client}
+\label{sec:thick client und thin client}
+Ein Client ist ein Computer oder eine Software, die eine Netzwerkverbindung zu einem Server aufbaut, mit ihm kommuniziert und Dienste sowie Daten anfordert. Ein Client hat vor allem die Aufgabe, Anfragen der Anwender an den Server zu übermitteln und die übermittelte Informationen grafisch darzustellen, sodass der Anwender sie auf seinem Gerät wahrnehmen kann (\textbf{siehe Abbildung \ref{fig:client-server-modell}}).\bigskip
+
+Es gibt dabei zwei Arten von Clients zu unterscheiden:
+\begin{itemize}
+\item \textbf{Thick Client:}\\
+wird häufig auch als Fat-Client genannt, ist ein leistungsfähiger Desktop-Computer, der die Daten lokal selbst verarbeitet.
+\item \textbf{Thin Client:}\\
+ist in Abhängigkeit mit einem Server, um die Aufgaben verarbeiten zu können. Thin Client hat nur eine Rolle, nämlich Anfragen an der Server weiterzuleiten und die vom Server übermittelten Daten auszuwerten. Kein Installationsaufwand, da er über einen Webbrowser läuft. 
+\end{itemize}

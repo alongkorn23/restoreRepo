@@ -48,16 +48,16 @@ Die Gruppengröße bei einer Brainstorming-Sitzung sollte nicht zu groß und zu 
 Nach \cite{Rei2007} läuft eine Brainstorming-Sitzung in folgenden Phasen ab: 
 
 \begin{itemize} 
-\item Vorbereitung: \\
+\item Vorbereitung:\\
 Der Moderator stellt in dieser Phase die zu behandelte Frage und die Regeln vor. Bei Notwendigkeit kann ein oder mehrere Protokollant/en bestimmt werden.
 
-\item Ideen sammeln: \\
+\item Ideen sammeln:\\
 Die Teilnehmer dürfen Ideen und Vorschläge frei äußern. Der Moderator muss in dieser Phase vor allem die stillere Teilnehmer motivieren und ermuntern. Die Kritik ist in dieser Phase untersagt. Die Ergebnisse werden dabei protokolliert. In der Regel werden die Ideen auf eine Notizzettel geschrieben und an die Wand gepinnt.
 
-\item Zusammenfassung und Auswertung: \\
+\item Zusammenfassung und Auswertung:\\
 Das Brainstorming ist nun beendet und der Moderator wird die Gruppe zunächst die dokumentierte Ergebnisse präsentieren. Anschließend werden die Ideen gemeinsam mit der Gruppe ausgewertet, sortiert und geordnet. In dieser Phase ist Kritik erlaubt und darf geäußert werden. Am Ende dieser Phase soll eine Liste mit den gut bewerteten Ideen und Vorschläge entstehen.
 
-\item Nachbereitung: \\
+\item Nachbereitung:\\
 Ein Brainstorming fördert nur die Kreativität. Die Vorschlägen müssen danach umgesetzt und realisiert werden. Sonst helfen die Ideen nicht, wenn nichts daraus gemacht wird.
 \end{itemize}
 
@@ -297,8 +297,124 @@ Zusammenfassend lässt sich sagen, dass WebSocket ein geeigneter Protokoll ist, 
 \leftskip=4em % Parameter anpassen
 \rightskip\leftskip
 \noindent \glqq [...] die komplexen Probleme des ‘Echtzeit-Web’, wie Latenz oder Netzverkehr, anzugehen. WebSocket wird jedoch nicht als ein ‘besseres AJAX’ entwickelt. Ebenfalls stellt WebSocket keinen 1:1-Ersatz für HTTP dar, sondern bietet vielmehr einen effizienten, bidirektionalen Kommunikationskanal an. Die Integration von ‘Echtzeit’ innerhalb von Webanwendungen ist nicht mehr an Hacks und Workarounds gebunden, sondern erfolgt auf Basis eines standardisierten, effizienten und bidirektionalen Protokolls. Wichtig ist hierbei, dass man sämtliche TCP/UDP-Protokolle auf Basis von WebSocket zum Browser bringen kann. Der Abstraktionsgrad zukünftiger Webanwendungen steht damit den Desktop-Anwendungen in nichts nach.\grqq{} \cite{Matt2011}
+\par
+\endgroup
 
 \subsection{jQuery}
 \label{sec:jQuery}
+jQuery ist eine JavaScript-Bibliothek, die Klassen und Methoden zur Verfügung stellt, um die Arbeit mit JavaScript zu vereinfachen. jQuery ist nicht nur kompakter und komfortabler als JavaScript, sondern außerdem browserübergreifend, was bei JavaScript in der Vergangenheit nicht immer der Fall war. jQuery vereinfacht viele JavaScript-Funktionen, die bei der Webentwicklung oft verwendet wird. Wie JavaScript ermöglicht jQuery auch den Zugriff auf DOM-Elemente. DOM-Elemente können gezielt angesprochen und manipuliert werden. (vgl. \cite{Ste2019})\bigskip
 
+Laut \cite{Wiki2019b} ist jQuery die meist verwendete JavaScript-Bibliothek und wird auf rund 70\% der 10000 meistbesuchten Webseiten eingesetzt.\bigskip
 
+Das DOM versteht sich als die Schnittstelle für den Zugriff auf den Tags, Attribute und Inhalte von HTML- oder XML-Dokumenten und wird vom W3C definiert. Mithilfe von Selektoren und dem DOM können die HTML-Elemente aufgerufen, verändert, hinzugefügt und gelöscht werden. Die Elemente können über id- oder class-Attribute selektiert werden. 
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.5]{img/dom}
+	\caption{DOM - Elementenbaum einer Webseite}
+	\footnotesize\sffamily\textbf{Quelle:} By Birger Eriksson - Own work, CC BY-SA 3.0, \url{https://commons.wikimedia.org/w/index.php?curid=18034500} 
+	\label{fig:dom}
+  \end{center}   
+\end{figure}
+
+\newpage
+Weitere jQuery-Funktion:
+\begin{itemize}
+\item Event Handling
+\item Form Handling
+\item AJAX
+\item JSON
+\item Collect und Select
+\item Animationen
+\end{itemize}
+
+\section{Responsive Webdesign}
+\label{sec:responsive webdesign}
+Um eine Webseite geräteübergreifend zu gestalten, benötigt sie ein \glqq Responsive Webdesign\grqq{}. Beim Responsive Webdesign handelt es sich um eine reaktions- und anpassungsfähige Weboberfläche, so dass diese ein einheitliches Anzeigen von Inhalten sowie den strukturellen Aufbau einer Webseite auf dem Desktop-Computer, Tablet und Smartphone bietet. Laut \cite{Wiki2019c} wurde der Begriff im Jahr 2010 vom amerikanischen Webdesigner Ethan Marcotte erfunden.\bigskip
+
+Da es zu jener Zeit kaum internetfähige Mobilgeräte auf dem Markt gab, waren die meisten Webseiten statisch und nur für Desktop-Computer entwickeln worden. Um eine Webseite für Mobilgeräte anzubieten, musste separat eine mobile Webseite entwickelt werden.\bigskip
+
+Erst mit der Einführung des IPhones von Apple im Januar 2007\footnote{vgl. \url{https://de.wikipedia.org/wiki/IPhone_(erste_Generation)}} war es für den Benutzer möglich, mobil ins Internet zu gehen. Erstmals verfügte ein Mobilgerät einen vollwertigen Webbrowser und war über einen Touchscreen verfügbar. Viele Firmen folgten dem Beispiel von Apple und wenige Jahre später brachten sie eine Menge an verschiedenen Mobilgeräten mit individuellen Displaygrößen auf dem Markt.\bigskip
+
+Seit der Einführung der Smartphones, Tablets und mit der steigenden mobilen Internetnutzung ist ein Responsive Webdesign heutzutage nicht nur ein nettes Feature sondern ein Pflichtprogramm für jeden Webseitenbetreiber. Für neue Webseiten liegt es auf der Hand, wie man vorgehen sollte, für bestehende statische Webseiten ist der Aufwand sehr groß, diese auf eine responsive Webseite umzustellen, da eventuell die komplette Seite neu entwickeln werden muss.\bigskip
+
+Die vorliegende Arbeit soll auf verschiedenen Geräten optimal angezeigt werden können. Als \glqq responsive\grqq{} Webseite muss sie unter anderem folgende Eigenschaften haben.
+
+\begin{itemize}
+\item \textbf{flexibles Grid\footnote{aus dem Englischen für das Gestaltungsraster bekannt}-Layout}\par
+Seiten und Elemente, wie Bilder oder Textblöcke, müssen sich der Bildschirmauflösung des mobilen Endgeräts anpassen. Hier werden für die Elemente und Seiten prozentuale statt fester Pixelwerte verwendet.
+\item \textbf{keine festen Schriftgrößen}\par
+Fließtexte und Headlines müssen so angepasst werden, dass sie sowohl auf dem PC als auch auf Smartphones und Tablet gut lesbar sind. Hier ist eine feste Schriftgröße nicht geeignet. Es wird daher mit prozentualen Werten oder Maßen wie em gearbeitet.
+\end{itemize}
+
+\section{Web 2.0}
+\label{sec:web2.0}
+Das Web 2.0 wird als \glqq Mitmach-Netz\grqq{} verstanden. Es ist eine Revolution hinsichtlich der Nutzung des World Wide Web, bei der Internetnutzer nicht mehr wie früher, nur die Inhalte des Internets konsumieren, sondern auch eigene Inhalte selbst produzieren, wie Videos und Fotos einstellen oder Texte schreiben. Durch seine Beteiligung im Web ist der Internetnutzer selbst ein Teil des Internets.\bigskip 
+
+Beim Web 2.0 handelt es sich dabei nicht um eine neue Technologie, sondern vielmehr um die Weiterentwicklung des Internets. Dazu zählt beispielsweise der vermehrte Einsatz der AJAX-Technologie, die eine asynchrone Datenübertragung zwischen Client und Server ermöglicht. Oder der Einsatz von Abonnementdienste (Web-Feeds), welche eine grundlegende Eigenschaft für die neue Generation des World Wide Webs sind. (vgl. \cite{o.V.2008})\bigskip
+
+Der Begriff Web 2.0 ist durch seinen Artikel \glqq What is Web 2.0\grqq{} von amerikanischen Verleger Tim O’Reilly in 2005 bekannt geworden\footnote{vgl. \url{https://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html}}.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.6]{img/web2_map.jpg}
+	\caption{Das Konzept Web 2.0 nach einer Brainstorming-Sitzung}
+	\footnotesize\sffamily\textbf{Quelle:} \url{http://www.siliconbeat.com/entries/meme-map.jpg} 
+	\label{fig:web2_map}
+  \end{center}   
+\end{figure}
+
+\textbf{Die Abbildung \ref{fig:web2_map}} zeigt ein Konzept von Web 2.0, die mit einem Brainstorming zwischen O’Reilly und MediaLive International entwickelt wurde. \textbf{Die Abbildung \ref{fig:Web1vsWeb2}} beschreibt einige Beispiele für die Bedeutung von Web 2.0, die im ersten Brainstorming zwischen O’Reilly und MediaLive International formuliert wurden.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.7]{img/web1_vs_web2}
+	\caption{Die Bedeutung von Web 2.0}
+	\footnotesize\sffamily\textbf{Quelle:} \url{https://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html?page=1#mememap} 
+	\label{fig:Web1vsWeb2}
+  \end{center}   
+\end{figure}
+
+\newpage
+Außerdem stellte O’Reilly sieben Merkmale vor, die kennzeichnend für Web 2.0 sind:
+
+\begin{itemize}
+\item \textbf{Das Web als Plattform:}
+\begin{itemize}
+\item Das Web als Plattform ähnlich wie ein Betriebssystem.
+\end{itemize}
+\item \textbf{Kollektive Intelligenz:}
+\begin{itemize}
+\item Verlinkung der Daten und Seiten untereinander.
+\end{itemize}
+\item \textbf{Daten als nächstes Intel Inside:}
+\begin{itemize}
+\item Die gesammelte Daten sind die Basis einer Webanwendung und sind wichtiger und wertvoller als eine einzelne Anwendung.
+\end{itemize}
+\item \textbf{Softwarelebenszyklus:}
+\begin{itemize}
+\item Software wird nicht mehr als Produkt ausgeliefert, sondern als Service.
+\end{itemize}
+\item \textbf{Lightweight Programming Models:}
+\begin{itemize}
+\item Daten werden durch Web-Services bereitgestellt.
+\end{itemize}
+\begin{itemize}
+\item Die Daten werden über den Web-Services wie RSS oder REST-basierten Web-Services verteilt oder ausgetauscht.
+\end{itemize}
+\item \textbf{Software über Gerätegrenzen hinaus:}
+\begin{itemize}
+\item Geräteunabhängige Anwendungen, z.B. nicht nur für den PC sondern auch mobile Geräte.
+\end{itemize}
+\item \textbf{Rich User Experiences:}
+\begin{itemize}
+\item Benutzerführung mit interaktiver Benutzeroberfläche, die sich kaum von einem Desktop-Programm unterscheiden.
+\end{itemize}
+\begin{itemize}
+\item AJAX-Technologie.
+\end{itemize}
+\end{itemize}
+
+\newpage
+\section{Rich Internet Applications}
+\label{sec:rich internet applications}

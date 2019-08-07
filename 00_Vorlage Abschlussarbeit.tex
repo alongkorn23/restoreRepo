@@ -17,11 +17,10 @@ Durchführung von Workshops in Echtzeit},
 ]{hyperref}
 
 \urlstyle{same}
-
-
 % Standard Packages
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
+\usepackage[final]{microtype}
 %\usepackage[T1]{fontenc}
 \usepackage{fontspec}
 \defaultfontfeatures{Mapping=text-text}
@@ -40,8 +39,16 @@ Durchführung von Workshops in Echtzeit},
 \usepackage{amsmath}
 %\usepackage{showframe} 
 \usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
 %nicht einrücken nach Absatz
 %\setlength{\parindent}{0pt}
+
+\newcommand*\oldurlbreaks{} 
+\let\oldurlbreaks=\UrlBreaks 
+\renewcommand{\UrlBreaks}{\oldurlbreaks\do\a\do\b\do\c\do\d\do\e% 
+  \do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q% 
+  \do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\?\do\&} 
 
 
 % ============= Kopf- und Fußzeile =============

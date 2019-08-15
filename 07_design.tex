@@ -134,7 +134,7 @@ Es sind drei Navigations-Tabs (Nr.2) vorhanden:
 beendet den laufenden Workshop und leitet den Moderator zur \textbf{Hauptseite} weiter. Der Workshop wird anschließend in \glqq Beendete Workshops\grqq{} archiviert \textbf{(Abbildung \ref{fig:mockup für die hauptseite})}.
 \end{itemize}
 \item Die Agenda, falls sie vorhanden ist, wird im Navigation-Tab \glqq Agenda\grqq{} dargestellt.
-\item Neben dem Einscannen des QR-Codes können die Teilnehmer im Navigation-Tab \glqq Teilnehmer\grqq{} die Einladung per Mail senden lassen, um am Workshop teilzunehmen.\bigskip
+\item Neben dem Einscannen des QR-Codes \textbf{(Abschnitt \ref{subsec:mockup der präsentation-seite})} können die Teilnehmer im Navigation-Tab \glqq Teilnehmer\grqq{} die Einladung per Mail senden lassen, um am Workshop teilzunehmen.\bigskip
 
 \begin{figure}[H]
   \begin{center}
@@ -181,7 +181,7 @@ Der \glqq Eingabe beenden-Button\grqq{} bricht die Eingabefunktion auf der \text
 
 \subsection{Mockup der Teilnehmer-Seite}
 \label{subsec:Mockup der Teilnehmer-Seite}
-Um auf diese Seite zu kommen, müssen die Teilnehmer entweder über Ihre Mobilgeräte den QR-Code auf der Präsentation-Seite \textbf{(siehe Abschnitt \ref{subsec:mockup der präsentation-seite})} einscannen oder sie lassen sich die Einladung zur Teilnahme am Workshop per Mail zusenden, um am Workshop teilnehmen zu können. Die Teilnehmer-Seite stellt jedem Workshop-Teilnehmer die Dateneingabefunktion zu einer gestarteten Session bereit. Beim Aufrufen der Seite werden die Teilnehmer aufgefordert, einen Benutzernamen einzugeben \textbf{(Abbildung \ref{fig:mockup für eingabe der benutzernamen})}.
+Um auf diese Seite zu kommen, müssen die Teilnehmer entweder über Ihre Mobilgeräte den QR-Code auf der Präsentation-Seite \textbf{(Abschnitt \ref{subsec:mockup der präsentation-seite})} einscannen oder sie lassen sich die Einladung zur Teilnahme am Workshop per Mail zusenden, um am Workshop teilnehmen zu können. Die Teilnehmer-Seite stellt jedem Workshop-Teilnehmer die Dateneingabefunktion zu einer gestarteten Session bereit. Beim Aufrufen der Seite werden die Teilnehmer aufgefordert, einen Benutzernamen einzugeben \textbf{(Abbildung \ref{fig:mockup für eingabe der benutzernamen})}.
 
 \begin{figure}[H]
   \begin{center}
@@ -214,6 +214,63 @@ Die Session-Frage in \textbf{Abbildung \ref{fig:mockup für die eingabefunktion}
 
 \subsection{Mockup der Präsentation-Seite}
 \label{subsec:mockup der präsentation-seite}
+Die Präsentation-Seite dient der Darstellung der Dateneingabe von allen Teilnehmern in Echtzeit. Die Seite hat zwei Zustände, nämlich passiv und aktiv.
 
+\begin{itemize}
+\item passiver Zustand:\\
+Dieser Zustand bedeutet, dass keine Session gerade läuft. Die Präsentation-Seite zeigt bei diesem Zustand den QR-Code zur Teilnahme am Workshop an. Bevor die Session tatsächlich beginnt, können die Teilnehmer den QR-Code über Ihre Mobilgeräte einscannen, um am Workshop teilzunehmen \textbf{(Abbildung \ref{fig:mockup für das anzeigen des qr-codes})}. Falls es eine Agenda zu dem Workshop gibt, wird sie neben dem QR-Code dargestellt \textbf{(Abbildung \ref{fig:mockup für das anzeigen eines qr-code und einer agenda})}.\bigskip
 
+\begin{figure}[H]
+	\centering
+  \begin{minipage}[t]{0.45\linewidth}
+  	    \includegraphics[width=.8\linewidth]{img/präsentationseite1}
+		\caption{Mockup für das Anzeigen eines QR-Codes}
+		\label{fig:mockup für das anzeigen des qr-codes}
+  \end{minipage}
+\hfill
+  \begin{minipage}[t]{0.45\linewidth}
+    	    \includegraphics[width=.8\linewidth]{img/präsentationseite2}
+		\caption{Mockup für das Anzeigen eines QR-Code und einer Agenda}
+		\label{fig:mockup für das anzeigen eines qr-code und einer agenda}
+  \end{minipage}
+\end{figure}
+
+\newpage
+\item aktiver Zustand:\\
+Die Präsentation-Seite befindet sich im aktiven Zustand, wenn die Session gestartet ist. Auf der Präsentation-Seite werden die Dateneingaben der Teilnehmer in Echtzeit präsentiert \textbf{(Abbildung \ref{fig:mockup für die darstellung der dateneingabe auf der präsentation-seite})}.\bigskip
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.5]{img/präsentationseite3}
+	\caption{Mockup für die Darstellung der Dateneingabe auf der Präsentation-Seite}  
+	\label{fig:mockup für die darstellung der dateneingabe auf der präsentation-seite}
+  \end{center}   
+\end{figure}
+
+Die behandelte Frage (Nr.1) ist am oberen Inhaltsbereich zu sehen. Die Eingaben der Teilnehmer (Nr.2) werden wie ein Notizzettel visualisiert. Ein Notizzettel besteht aus zwei Teilen, dem Namen des Teilnehmers und seine Idee. Am unteren Bereich der Präsentation-Seite befinden sich zwei Buttons (Nr.3). Während die Session läuft, kann der QR-Code des Workshops mit dem Drücken des QR-Code-Buttons angezeigt werden. Wenn der QR-Code-Button getätigt wird, wandelt er sich anschließend im \glqq QR-Code ausblenden-Button\grqq{} um. Die Session wird dabei nicht beendet und kann mit dem Drücken des \glqq QR-Code ausblenden-Button\grqq{} wieder, wie auf der \textbf{Abbildung \ref{fig:mockup für die darstellung der dateneingabe auf der präsentation-seite}}, zurückkommen. Der QR-Code kann sowohl im passiven Zustand \textbf{(Abbildung \ref{fig:mockup für das anzeigen des qr-codes})} als auch im aktiven Zustand dargestellt werden. Der Vollbild-Button wandelt die Präsentation-Seite in den Vollbildmodus um.\bigskip
+
+Um die eingegebenen Daten auf der Präsentation-Seite zusammenfassen zu können, muss der Moderator den \glqq Eingabe beenden-Button\grqq{} auf der \textbf{Controller-Seite}, wie in \textbf{Abbildung \ref{fig:mockup für die aktive session}} zu sehen ist, drücken. Die Kategorien lassen sich anschließend mit dem \glqq Kategorie erstellen-Button\grqq{} erstellen \textbf{(Abbildung \ref{fig:mockup für zusammenfassung-modus auf der präsentation-seite})}.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.5]{img/präsentationseite4}
+	\caption{Mockup für Zusammenfassung-Modus auf der Präsentation-Seite}  
+	\label{fig:mockup für zusammenfassung-modus auf der präsentation-seite}
+  \end{center}   
+\end{figure}
+
+Direkt auf der Präsentation-Seite kann der Moderator die Daten mit der Drag-\&-Drop-Funktion in Kategorien zusammenfassen. Die Kategorien selbst lassen sich nicht verschieben. Das Löschen einer Kategorie erfolgt mit dem Klick auf dem X-Button. Es wird nur die Kategorie gelöscht, d.h. die darin befindlichen Daten bleiben auf der Präsentation-Seite erhalten.
+\end{itemize}
+
+\subsection{Mockup der Ergebnisse-Seite}
+\label{subsec:mockup der ergebnisse-seite}
+Mit Klick auf den Ergebnisse-Button in \textbf{Abbildung \ref{fig:mockup für die hauptseite}} sowie in \textbf{Abbildung \ref{fig:controller-seite}} wird als neues Browser-Tab die Ergebnisse-Seite des Workshops geöffnet. Auf der Seite befinden sich die Daten inklusive Kategorien des Workshops. Die Ergebnisse-Seite beinhaltet außerdem einen Button, mit dem die Ergebnisse als eine PDF-Datei heruntergeladen werden kann \textbf{(Abbildung \ref{fig:mockup für die darstellung der ergebnisse des workshops})}.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.45]{img/ergebnisse_seite}
+	\caption{Mockup für die Darstellung der Ergebnisse des Workshops}  
+	\label{fig:mockup für die darstellung der ergebnisse des workshops}
+  \end{center}   
+\end{figure}
 

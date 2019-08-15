@@ -235,17 +235,37 @@ Auf der obersten Ebene steht das Projekt. Eine Ebene darunter die Teilprojekte o
 
 Die Konkurrenz-Tools und eine Analyse von funktionalen, nicht-funktionalen Anforderungen sowie die Muss- und Kann-Anforderungen werden in der ersten Phase untersucht. Durch diese Analyse wird die Struktur und ein passendes Layout der Webanwendung erstellt. Die daraus entstehende Designentscheidung wird technisch in eine Webanwendung umgesetzt und am Ende wird die Webanwendung anhand eines selbst erstellten Bewertungsformulars von den Mitarbeiter im Unternehmen (mindestens 2 Personen) bewertet.
 
+\newpage
 \section{Ist-Analyse}
 \label{sec:istAnalyse}
-Bei der Projektvorstellung wurde in der Firma zunächst über den Zustand der aktuellen Lösung für die Durchführung von Workshops gesprochen.\bigskip
+Bei der Projektvorstellung wurde in der Firma zunächst über den Zustand der aktuellen Lösungen für die Durchführung von Workshops gesprochen.\bigskip
 
 Wie der Abschnitt \textbf{Stand der Technik (Abschnitt \ref{sec:stand der technik})} aufgezeigt hat, existieren bereits zahlreiche webbasierte Tools für die Durchführung von Workshops.\bigskip
 
-Nach der Betrachtung der aktuellen Lösungen fällt das Fazit des Unternehmens folgendermaßen aus: Die beiden Tools reichen noch nicht aus, um Workshops effektiv durchzuführen. Während \textbf{IdeaBoardz} keine Zusammenarbeit in Echtzeit bieten kann, hat \textbf{Miro} bei der kostenlosen Version eine begrenzte Anzahl an Teammitgliedern, d.h. Workshops mit mehr als drei Teilnehmer muss deshalb die kostenpflichtige Version verwendet werden. Außerdem bereiten die aktuellen Lösungen viel Mühe in puncto Dateneingabe. Das bedeutet aus Sicht der Teilnehmer, dass sie erst mehrmalige \glqq Klicks\grqq{} benötigen, um Ihre Gedanken eingeben zu können.\bigskip
+Nach der Betrachtung der aktuellen Lösungen fällt das Fazit des Unternehmens folgendermaßen aus: Die vorhandenen Tools reichen noch nicht aus, um Workshops effektiv durchzuführen. Während \textbf{IdeaBoardz \ref{sec:ideaBoardz}} keine Zusammenarbeit in Echtzeit bieten kann, hat \textbf{Miro \ref{sec:miro-realtimeBoard}} bei der kostenlosen Version eine begrenzte Anzahl an Teammitgliedern, d.h. Workshops mit mehr als drei Teilnehmer muss deshalb die kostenpflichtige Version verwendet werden. Außerdem bereiten die aktuellen Lösungen viel Mühe in puncto Dateneingabe. Besonders auf dem Smartphone-Bildschirm ist die Dateneingabe sehr fummelig und nicht komfortabel. Das Smartphone scheint für eine Arbeit mit der aktuellen Lösungen überfordert zu sein. \bigskip
 
-Als weitere und oft eingesetzte Methode zum Brainstormen in den Workshops ist das Mindmapping. Es ist eine Form, die beim Brainstorming entstehenden Ideen bildlich zu strukturieren. Jedoch hat die Mindmapping-Methode auch ihre Nachteile. Man muss sich zunächst an diese Form der Aufzeichnung gewöhnen. Denn MindMaps sehen auf den ersten Blick unübersichtlich und verschachtelt aus. Diese können sehr schnell ihre Übersichtlichkeit verlieren, wenn verschiedene Schlüsselwörter in Beziehung stehen. Demzufolge ist die Akzeptanz der Personen, die mit dieser Methode bzw. dieser Aufzeichnung nicht vertraut sind, eher gering. Es ist außerdem sehr zeitaufwendig, eine Mindmap exakt nach den Regeln zu erstellen. Mindmaps sind eher für den individuellen Gebrauch geeignet, da die verwendeten Schlüsselbegriffe und die Strukturierungen häufig für andere Personen unverständlich sind.\bigskip
+Als weitere und oft eingesetzte Methode zum Brainstormen in den Workshops ist das Mindmapping. Es ist eine Form, die beim Brainstorming entstehenden Ideen bildlich zu strukturieren. Jedoch hat die Mindmapping-Methode auch ihre Nachteile. Man muss sich zunächst an diese Form der Aufzeichnung gewöhnen. Denn MindMaps sehen auf den ersten Blick unübersichtlich und verschachtelt aus. Diese können sehr schnell ihre Übersichtlichkeit verlieren, wenn verschiedene Schlüsselwörter in Beziehung stehen. Demzufolge ist die Akzeptanz der Nutzer, die mit dieser Methode bzw. dieser Aufzeichnung nicht vertraut sind, eher gering. Es ist außerdem sehr zeitaufwendig, eine Mindmap exakt nach den Regeln zu erstellen. Mindmaps sind eher für den individuellen Gebrauch geeignet, da die verwendeten Schlüsselbegriffe und die Strukturierungen häufig für andere Personen unverständlich sind.\bigskip
 
-Es wird von daher eine alternative Lösung benötigt, um dieses Problem zu beheben und vor allem die Durchführung von Workshops effektiver zu gestalten. Eine dieser alternativen Lösungen wäre eine benutzerfreundliche Webanwendung zu entwickeln, bei der die Teilnehmer auf ihren Endgeräten mit nur einem \glqq Klick\grqq{} ihre Gedanken eingeben können, die eine Darstellung in Echtzeit möglich machen und dem Moderator ermöglichen, die Daten digital durch eine einfach zu bedienende Benutzeroberfläche zusammenzufassen.
+Es lässt sich nicht verhindern, dass eine neue Lösung benötigt wird, um das aktuelle Problem zu lösen und vor allem die Durchführung von Workshops effektiver zu gestalten.
+
+\section{Unternehmensanforderungen}
+\label{sec:unternehmensanforderungen}
+In diesem Abschnitt werden die Unternehmensanforderungen an die zu entwickelnden Lösung besprochen.\bigskip
+
+Die neue Lösung soll eine benutzerfreundliche Webanwendung sein, die intuitiv bedienbar sein soll. Der Moderator ist hauptverantwortlich für die Steuerung der Webanwendung. Er sollte deshalb die volle Kontrolle und Funktionsberechtigung auf die Webanwendung erhalten. Das Brainstorming soll in einer Sitzung (Session) durchgeführt werden. In dieser Sitzung wird versucht, möglichst viele Ideen für ein zuvor klar definiertes Problem zu produzieren. Ein Workshop sollte nicht nur auf eine Sitzung beschränken. Es sollte möglich sein, in einem Workshop mehrere Brainstorming-Sitzungen abwickeln zu können.\bigskip
+
+Die teilnehmenden Personen wiederum sind nur für die inhaltlichen Beiträge zuständig. Die neue Lösung sollte so entwickelt werden, dass die Teilnehmer besonders auf Ihren Mobilgeräten ohne mühevolle Tipperei und ohne großen Aufwand Ihre Ideen abgeben können. Die Ideen sollen dann in Echtzeit für alle sichtbar dargestellt werden, welche am Ende der Sitzung digital vom Moderator durch ein einfaches zu bedienendes User Interface zusammengefasst werden können/müssen.\bigskip
+
+Die weiteren Hauptkriterien für die neue Lösung sind:
+\begin{itemize}
+\item Login-Bereich (Moderator)
+\item QR-Code zur Teilnahme am Workshop (Teilnehmer)
+\item Thin Client-Anwendung
+\item Rich Internet Applications
+\item Responsive Webdesign 
+\item Browserunabhängigkeit
+\item Export der Ergebnisse in eine PDF-Datei
+\end{itemize}
 
 \section{Anforderungsanalyse}
 \label{sec:anforderungsanalyse}
@@ -260,24 +280,24 @@ Aus den Unternehmensanforderungen lassen sich folgenden funktionalen Anforderung
 \begin{enumerate}
 \item \textbf{Der Moderator soll sich über ein Anmeldeformular anmelden können.}\\
 Eine dem Moderator bekannte URL führt auf die Willkommensseite der Webanwendung. Dort wird er über ein Anmeldeformular aufgefordert, seinen Benutzernamen und Passwort einzugeben. Das System vergleicht die Eingabe mit der in Datenbank angelegten Nutzerdaten. Gelingt die Anmeldung, wird auf die Hauptseite weitergeleitet. Wenn dem System die Anmeldung nicht bekannt ist, wird eine entsprechende Fehlermeldung angezeigt und die Willkommensseite verbleibt. Für die vorliegende Arbeit werden die Nutzerdaten manuell in einem Datenbanksystem erstellt. Der Registrierungsvorgang wird für die zukünftige Weiterentwicklung im letzten Kapitel festgehalten. 
-\item \textbf{Der Moderator soll sich über eine Navigationsleiste abmelden können.}\\ 
-Jede moderne Webanwendung bietet dem eingeloggten Nutzer die Möglichkeit, sich ordnungsgemäß auszuloggen. Über das Navigationselement \glqq Ausloggen\grqq{} in der Navigationsleiste kann sich der Moderator ausloggen und er wird zur Willkommensseite weitergeleitet.
+\item \textbf{Der Moderator soll sich mittels einer Navigationselement abmelden können.}\\ 
+Jede moderne Webanwendung bietet dem eingeloggten Nutzer die Möglichkeit, sich ordnungsgemäß auszuloggen. Mit dem Element \glqq Ausloggen\grqq{} in der Navigationsleiste kann sich der Moderator abmelden und er wird zur Willkommensseite weitergeleitet.
 \item \textbf{Der Moderator soll neue Workshops erstellen, sie bearbeiten und löschen können.}\\
-Der moderierende Person soll die Möglichkeit haben, neue Workshops anzulegen. Die erstellten Workshops werden in eine Liste angezeigt und sollen von dem Moderator bearbeitet und gelöscht werden können. Die Workshops sollen in einer Datenbank gespeichert werden.
+Der moderierende Person soll die Möglichkeit haben, neue Workshops anzulegen. Die erstellten Workshops werden in eine Liste angezeigt und sollen von dem Moderator bearbeitet und gelöscht werden können. Die Workshops sollten in einer Datenbank gespeichert werden.
 \item \textbf{In einem Workshop sollen eine oder mehreren Sitzungen (Sessions) für Ideenfindung und -sammlung erstellt werden können.}\\
-Eine Session versteht sich als eine Sitzung, um Lösungen für Problemstellung zu generieren, verschidene Themen aufzuarbeiten oder Entwicklung neuer Geschäftsideen sowie Innovationen zu fördern. Der Moderator soll in einem Workshop eine oder mehreren Sitzungen (Sessions) erstellt werden können. Er sollte die erstellten Sessions auch bearbeitet und gelöscht werden können. Die Sessions sollen ebenso in einer Datenbank gespeichert werden.
+Eine Session versteht sich als eine Sitzung, um Lösungen für Problemstellung zu generieren, verschidene Themen aufzuarbeiten oder Entwicklung neuer Geschäftsideen sowie Innovationen zu fördern. Der Moderator soll in einem Workshop eine oder mehreren Sitzungen (Sessions) erstellt werden können. Er sollte die erstellten Sessions auch bearbeitet und gelöscht werden können. Die Sessions sollten ebenso in einer Datenbank gespeichert werden.
 \item \textbf{Die teilnehmenden Personen sollen über einen QR-Code oder eine Einladungsmail an dem jeweiligen Workshop mitwirken können.}\\
-Zu Beginn des Workshops sollte der Moderator einen QR\footnote{englisch: Quick Response}-Code zur Teilnahme am Workshop über dem Beamer eingeblendet werden können, sodass die anwesenden Teilnehmer diesen mit ihren Endgeräte einscannen und an diesem Workshop mitwirken können. Die Einladung zur Teilnahme am Workshop sollte ebenfalls auch per Mail gesendet werden können.
+Zu Beginn des Workshops sollte ein QR\footnote{englisch: Quick Response}-Code mittels Beamer angezeigt werden, sodass die anwesenden Teilnehmer diesen mit ihren Mobilgeräten einscannen und an diesem Workshop mitwirken können. Der Moderator sollte auch die Möglichkeit haben, auch während einer Sitzung den QR-Code einblenden zu können. Die Einladung zur Teilnahme am Workshop sollte ebenfalls auch per Mail gesendet werden können.
 \item \textbf{Die Teilnehmer sollen auf ihren Endgeräte Ihre Ideen abgeben können.}\\
-Sobald eine Sitzung von einem Workshop gestartet ist, soll auf den Endgeräte der Teilnehmer zunächst ein Eingabefeld für Benutzernamen erscheinen. Dort werden sie aufgefordert, einen Benutzernamen einzugeben. Nach der Eingabe des Benutzernamens wird ein Textarea für die Dateneingabe freigeschaltet. Über diese können die Teilnehmer Ihre Gedanken und Vorschläge frei äußern. Außerdem sollten den Teilnehmern möglich sein, Ihren Benutzernamen zu ändern.
+Sobald eine Sitzung eines Workshops gestartet ist, sollten auf den Endgeräten der Teilnehmer zunächst ein Eingabefeld für Benutzernamen erscheinen. Dort werden sie aufgefordert, einen Benutzernamen einzugeben. Nach der Eingabe des Benutzernamens soll eine Textarea für die Dateneingabe freigeschaltet werden. Über diese sollen die Teilnehmer Ihre Gedanken und Vorschläge frei äußern können. Außerdem sollte es den Teilnehmern möglich sein, Ihren Benutzernamen zu ändern.
 \item \textbf{Die Dateneingabe der Teilnehmer sollen auf dem Beamer in Echtzeit angezeigt werden können.} \\
-Die eingegebenen Daten der Teilnehmer sollen in Echtzeit auf der Präsentationsseite, welche parallel über dem Beamer läuft, präsentiert werden.
+Die eingegebenen Daten der Teilnehmer sollen in Echtzeit auf der Präsentation-Seite, welche parallel über dem Beamer läuft, präsentiert werden.
 \item \textbf{Der Moderator soll die Daten in Kategorien zusammenfassen können.}\\
-Das Brainstorming ist beendet und der Moderator wird anschließend mit der Gruppe die Ergebnisse auswerten, sortieren und ordnen. Es soll dem Moderator erlaubt sein, die Ergebnisse direkt auf der Präsentationsseite per Drag \& Drop in Kategorien zusammenfassen. Die erstellten Kategorien sollten bearbeitet sowie gelöscht werden können. Sie sollen auch in einer Datenbank gespeichert werden.
+Das Brainstorming ist beendet und der Moderator wird anschließend mit der Gruppe die Ergebnisse auswerten und sortieren. Es soll dem Moderator erlaubt sein, die Ergebnisse direkt auf der Präsentation-Seite per Drag \& Drop in Kategorien zusammenzufassen. Die erstellten Kategorien sollen bearbeitet sowie gelöscht werden können. Sie sollten auch in einer Datenbank gespeichert werden.
 \item \textbf{Beim Löschen von Kategorien sollen die darin befindlichen Daten nicht betroffen sein.}\\
 Beim Löschen einer nicht leeren Kategorie, sollen die darin befindlichen Daten erhalten bleiben. Es wird nur die Kategorie gelöscht.
 \item \textbf{Die Ergebnisse sollen in eine PDF-Datei exportiert und heruntergeladen werden können.}\\
-Nach Beendigung eines Workshops sollen die Ergebnisse der zugehörigen Sessions zusammengefasst werden. Die Zusammenfassung soll anschließend als eine PDF-Datei heruntergeladen werden können. Die beendeten Workshops sollen außerdem in einer separaten Liste archiviert und angezeigt werden.
+Nach Beendigung des Workshops sollen die Daten digital von allen Sitzungen zusammengefasst und als PDF-Datei heruntergeladen werden können. Der beendete Workshop soll dann in einer separaten Liste archiviert werden.
 \end{enumerate}
 
 \subsection{Nicht-funktionale Anforderungen}
@@ -301,7 +321,7 @@ Außer der Plattformunabhängigkeit sollte die Anwendung in unterschiedlichen Br
 \item \textbf{Thin Client-Anwendung}\\
 Die Webanwendung soll eine Thin Client-Anwendung sein, dies bedeutet, dass die Anwendung nicht mehr auf jedem Client installiert werden muss, sondern über einen Webbrowser abrufbar und nutzbar ist. Das Updaten von Programmen sowie applikationsspezifische Funktionalitäten werden von Server zur Verfügung gestellt. Da alles über den Webbrowser abläuft, ist eine Thin Client-Anwendung hardware-, sprach- und betriebssystemunabhängig. Für JavaScript- bzw. AJAX-Anwendungen müssen keine weiteren Plug-Ins installiert werden, da die meisten Browser JavaScript unterstützen. 
 \item \textbf{Performance}\\
-Die eingegeben Daten seitens der Teilnehmer sollten ohne Verzögerung auf der Präsentationsseite angezeigt werden.
+Die eingegeben Daten seitens der Teilnehmer sollten ohne Verzögerung auf der Präsentation-Seite angezeigt werden.
 \end{itemize}
 
 \subsection{Muss- und Kann-Anforderungen}
@@ -370,6 +390,14 @@ Die funktionalen Anforderungen sowie nicht-funktionalen Anforderungen wurden ber
 	 NFA = Nicht-funktionale Anforderung 
 	 \label{tab:muss- und kann-anforderungen}
 \end{table}
+
+\section{Beispielszenario}
+\label{beispielszenario}
+In diesem Abschnitt wird die zu entwickelnden Lösung anhand eines Beispielszenarios näher beschrieben.\bigskip
+
+Man stelle sich folgende Situation vor: Sie führen ein Unternehmen und suchen für ein Problem eine Lösung. Hier sind also die Ideen gefragt. Sie laden alle Abteilungsleiter in den Besprechungsraum ein und führen dazu einen Workshop, um die Lösungsansätze zu erarbeiten. Beim Erarbeiten von Ergebnissen spielt dabei die hierarchische Position im Unternehmen keine Rolle. In einem Workshop ist jeder \glqq gleich\grqq{}.\bigskip
+
+Sie übernehmen die Rolle eines Moderators. Bevor der Workshop beginnt, erläutern Sie den teilnehmenden Personen das zu behandelnde Problem und das Ziel des Workshops. Die Ideenfindungsphase beginnt. Jeder der im Besprechungsraum anwesenden Teilnehmer kommt dran und gibt auf seinem Endgerät Ideen für die Lösung des Problems ein. Jede eingebrachte Idee wird mittels Beamer in Echtzeit präsentiert.  Die Ideenfindungsphase ist vorüber. Hier dürfen die anwesenden Teilnehmer keine Ideen mehr eingeben. Sie als Moderator haben jetzt die Aufgabe, die gesammelten Ideen gemeinsam mit der Gruppe zu analysieren und zu sortieren. Am Ende des Workshops haben Sie die Ergebnisse als Dokumentation vorliegen.
 
 
 

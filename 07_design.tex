@@ -134,7 +134,7 @@ Es sind drei Navigations-Tabs (Nr.2) vorhanden:
 beendet den laufenden Workshop und leitet den Moderator zur \textbf{Hauptseite} weiter. Der Workshop wird anschließend in \glqq Beendete Workshops\grqq{} archiviert \textbf{(Abbildung \ref{fig:mockup für die hauptseite})}.
 \end{itemize}
 \item Die Agenda, falls sie vorhanden ist, wird im Navigation-Tab \glqq Agenda\grqq{} dargestellt.
-\item Neben dem Einscannen des QR-Codes \textbf{(Abschnitt \ref{subsec:mockup der präsentation-seite})} können die Teilnehmer im Navigation-Tab \glqq Teilnehmer\grqq{} die Einladung per Mail senden lassen, um am Workshop teilzunehmen.\bigskip
+\item Neben dem Einscannen des QR-Codes auf der Präsentation-Seite \textbf{(Abbildung \ref{fig:mockup für das anzeigen des qr-codes})} können die Teilnehmer im Navigation-Tab \glqq Teilnehmer\grqq{} die Einladung per Mail senden lassen, um am Workshop teilzunehmen.\bigskip
 
 \begin{figure}[H]
   \begin{center}
@@ -164,7 +164,7 @@ Mit ihm kann die Titel- sowie Fragenänderung durchgeführt werden.
 \item Löschen-Button:\\
 Der Löschen-Button löscht die Session inklusive der zugehörigen Ergebnisse.
 \item Starten-Button:\\
-Es wird erst \glqq gebrainstormt\grqq{}, wenn die Session gestartet ist. Während die Session läuft, darf sie nicht bearbeitet und gelöscht werden. Alle Buttons von nicht aktiven Sessions werden auch in dieser Phase deaktiviert. Es kann nur eine Session gestartet werden. Außerdem kann der Workshop bei laufender Session nicht beendet werden. Der \glqq Beenden-Button\grqq{} in WS-Controller \textbf{(Abbildung \ref{fig:controller-seite})} wird auch deaktiviert.\bigskip
+Es wird erst \glqq gebrainstormt\grqq{}, wenn die Session gestartet ist. Während die Session läuft, darf sie nicht bearbeitet und gelöscht werden. Alle Buttons von nicht aktiven Sessions werden auch in dieser Phase deaktiviert. Es kann nur eine Session gestartet werden. Außerdem kann der Workshop bei laufender Session nicht beendet werden. Der \glqq Beenden-Button\grqq{} in WS-Controller \textbf{(Abbildung \ref{fig:mockup für die aktive session})} wird auch deaktiviert.\bigskip
 
 Es gibt zusätzlich noch zwei weiteren Buttons, welche erst sichtbar werden, wenn eine Session gerade läuft. Das ist der \glqq Eingabe beenden-Button\grqq{} und \glqq Session Beenden-Button\grqq{} \textbf{(Abbildung \ref{fig:mockup für die aktive session})}.
 
@@ -176,12 +176,12 @@ Es gibt zusätzlich noch zwei weiteren Buttons, welche erst sichtbar werden, wen
   \end{center}   
 \end{figure}
 
-Der \glqq Eingabe beenden-Button\grqq{} bricht die Eingabefunktion auf der \textbf{Teilnehmer-Seite} ab. In dieser Situation können keine weiteren Daten mehr eingegeben werden. Der \glqq Session Beenden-Button\grqq{} beendet die gerade laufende Session. Erst nach dem Beenden einer laufenden Session werden alle zuvor deaktivierten Buttons wieder reaktiviert.
+Der \glqq Eingabe beenden-Button\grqq{} bricht die Eingabefunktion auf der Teilnehmer-Seite \textbf{(Abschnitt \ref{subsec:Mockup der Teilnehmer-Seite})} ab. In dieser Situation können keine weiteren Daten mehr eingegeben werden. Der \glqq Session Beenden-Button\grqq{} beendet die gerade laufende Session. Auf der \textbf{Teilnehmer-Seite} wird durch den Klick auf dem \glqq Session Beenden-Button\grqq{} der Infotext \glqq Bitte Warten\grqq{} angezeigt und gleichzeitig wird der QR-Code auf der \textbf{Präsentation-Seite} dargestellt \textbf{(Abbildung \ref{fig:mockup für das anzeigen des qr-codes})}. Erst nach dem Beenden einer laufenden Session werden alle zuvor deaktivierten Buttons wieder reaktiviert.
 \end{enumerate}
 
 \subsection{Mockup der Teilnehmer-Seite}
 \label{subsec:Mockup der Teilnehmer-Seite}
-Um auf diese Seite zu kommen, müssen die Teilnehmer entweder über Ihre Mobilgeräte den QR-Code auf der Präsentation-Seite \textbf{(Abschnitt \ref{subsec:mockup der präsentation-seite})} einscannen oder sie lassen sich die Einladung zur Teilnahme am Workshop per Mail zusenden, um am Workshop teilnehmen zu können. Die Teilnehmer-Seite stellt jedem Workshop-Teilnehmer die Dateneingabefunktion zu einer gestarteten Session bereit. Beim Aufrufen der Seite werden die Teilnehmer aufgefordert, einen Benutzernamen einzugeben \textbf{(Abbildung \ref{fig:mockup für eingabe der benutzernamen})}.
+Um auf diese Seite zu kommen, müssen die Teilnehmer entweder über Ihre Mobilgeräte den QR-Code auf der Präsentation-Seite \textbf{(Abschnitt \ref{subsec:mockup der präsentation-seite})} einscannen oder sie lassen sich die Einladung zur Teilnahme am Workshop per Mail zusenden. Die Teilnehmer-Seite stellt jedem Workshop-Teilnehmer die Dateneingabefunktion zu einer gestarteten Session bereit. Beim Aufrufen der Seite werden die Teilnehmer aufgefordert, einen Benutzernamen einzugeben \textbf{(Abbildung \ref{fig:mockup für eingabe der benutzernamen})}.
 
 \begin{figure}[H]
   \begin{center}
@@ -208,9 +208,7 @@ Nach Eingabe des Benutzernamens werden die Teilnehmer auf die Eingabefunktion we
   \end{minipage}
 \end{figure}
 
-In der Navigationsleiste in \textbf{Abbildung \ref{fig:mockup für die anzeige der infotext}} sowie in \textbf{Abbildung \ref{fig:mockup für die eingabefunktion}} sind zwei Navigationselemente zu sehen. Der Benutzername ist der Name des Teilnehmers, welcher zuvor eingegeben wurde. Das Ausloggen erlaubt dem Teilnehmer, seinen Benutzernamen zu ändern.\bigskip
-
-Die Session-Frage in \textbf{Abbildung \ref{fig:mockup für die eingabefunktion}} ist die eigentliche Frage, welche in dieser Session behandelt wird. Die Textarea dient der Dateneingabe. Beim Klick auf den Abschicken-Button taucht die Dateneingabe sofort auf der \textbf{Präsentation-Seite} auf.
+In der Navigationsleiste in \textbf{Abbildung \ref{fig:mockup für die anzeige der infotext}} sowie in \textbf{Abbildung \ref{fig:mockup für die eingabefunktion}} sind zwei Navigationselemente zu sehen. Der Benutzername ist der Name des Teilnehmers, welcher zuvor eingegeben wurde. Das Ausloggen erlaubt dem Teilnehmer, seinen Benutzernamen zu ändern. Die Session-Frage in \textbf{Abbildung \ref{fig:mockup für die eingabefunktion}} ist die eigentliche Frage, welche in dieser Session behandelt wird. Die Textarea dient der Dateneingabe. Beim Klick auf den Abschicken-Button taucht die Dateneingabe sofort auf der \textbf{Präsentation-Seite} auf.
 
 \subsection{Mockup der Präsentation-Seite}
 \label{subsec:mockup der präsentation-seite}
@@ -249,7 +247,7 @@ Die Präsentation-Seite befindet sich im aktiven Zustand, wenn die Session gesta
 
 Die behandelte Frage (Nr.1) ist am oberen Inhaltsbereich zu sehen. Die Eingaben der Teilnehmer (Nr.2) werden wie ein Notizzettel visualisiert. Ein Notizzettel besteht aus zwei Teilen, dem Namen des Teilnehmers und seine Idee. Am unteren Bereich der Präsentation-Seite befinden sich zwei Buttons (Nr.3). Während die Session läuft, kann der QR-Code des Workshops mit dem Drücken des QR-Code-Buttons angezeigt werden. Wenn der QR-Code-Button getätigt wird, wandelt er sich anschließend im \glqq QR-Code ausblenden-Button\grqq{} um. Die Session wird dabei nicht beendet und kann mit dem Drücken des \glqq QR-Code ausblenden-Button\grqq{} wieder, wie auf der \textbf{Abbildung \ref{fig:mockup für die darstellung der dateneingabe auf der präsentation-seite}}, zurückkommen. Der QR-Code kann sowohl im passiven Zustand \textbf{(Abbildung \ref{fig:mockup für das anzeigen des qr-codes})} als auch im aktiven Zustand dargestellt werden. Der Vollbild-Button wandelt die Präsentation-Seite in den Vollbildmodus um.\bigskip
 
-Um die eingegebenen Daten auf der Präsentation-Seite zusammenfassen zu können, muss der Moderator den \glqq Eingabe beenden-Button\grqq{} auf der \textbf{Controller-Seite}, wie in \textbf{Abbildung \ref{fig:mockup für die aktive session}} zu sehen ist, drücken. Die Kategorien lassen sich anschließend mit dem \glqq Kategorie erstellen-Button\grqq{} erstellen \textbf{(Abbildung \ref{fig:mockup für zusammenfassung-modus auf der präsentation-seite})}.
+Um die eingegebenen Daten auf der Präsentation-Seite zusammenfassen zu können, muss die Ideensammlungsphase beendet werden. Dafür klickt der Moderator auf dem \glqq Eingabe beenden-Button\grqq{} auf der Controller-Seite, wie in \textbf{Abbildung \ref{fig:mockup für die aktive session}} zu sehen ist. Daraus folgt, dass auf der \textbf{Teilnehmer-Seite} die Eingabefunktion ausgeblendet und stattdessen der Infotext \glqq Bitte Warten\grqq{} angezeigt wird. Durch den Klick auf dem \glqq Eingabe beenden- Button\grqq{} auf der \textbf{Controller-Seite} wird der \glqq Kategorie erstellen-Button\grqq{} auf der Präsentation-Seite freigeschaltet, mit dem der Moderator Kategorien erstellen kann \textbf{(Abbildung \ref{fig:mockup für zusammenfassung-modus auf der präsentation-seite})}.
 
 \begin{figure}[H]
   \begin{center}
@@ -273,4 +271,16 @@ Mit Klick auf den Ergebnisse-Button in \textbf{Abbildung \ref{fig:mockup für di
 	\label{fig:mockup für die darstellung der ergebnisse des workshops}
   \end{center}   
 \end{figure}
+
+\subsection{Zusammenfassung der Konzeption}
+\label{subsec:zusammenfassung der konzeption}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.45]{img/Anforderung_neu}
+	\caption{Zusammenfassung der Konzeption der zu entwickelnden Webanwendung}  
+	\label{fig:zusammenfassung der konzeption}
+  \end{center}   
+\end{figure}
+
 

@@ -1,6 +1,6 @@
 \chapter{Analyse}
 \label{sec:analyse}
-Dieses Kapitel der Arbeit betrachtet zunächst den gegenwärtigen Stand der Technik hinsichtlich bereits vorhandenen Tools. Ihre Stärken und Schwächen werden ebenfalls aufgezeigt. Danach geht es um die Anforderungsanalyse der Webanwendung. Dazu wird eine allgemeine Struktur festgelegt, wie die Arbeit systematisch aufgebaut sein soll. Anschließend wird der aktuelle Zustand (Ist-Analyse) des Projektes ermittelt und anhand dieser Ist-Analyse erfolgen die funktionalen und nicht-funktionalen Anforderungen an die zu entwickelnde Webanwendung.
+In diesem Kapitel der Arbeit wird zunächst dem gegenwärtigen Stand der Technik Rechnung getragen. Danach geht es um die Anforderungsanalyse der Webanwendung. Dazu wird eine allgemeine Struktur festgelegt, wie die Arbeit systematisch aufgebaut sein soll. Anschließend wird der aktuelle Zustand (Ist-Analyse) des Projektes ermittelt und anhand dieser Ist-Analyse erfolgen die funktionalen und nicht-funktionalen Anforderungen an die zu entwickelnde Webanwendung.
 
 \section{Stand der Technik}
 \label{sec:stand der technik}
@@ -8,7 +8,7 @@ Bei der Suche nach öffentlich zugänglichen Tools für die Durchführung von Wo
 
 \subsection{IdeaBoardz}
 \label{sec:ideaBoardz}
-IdeaBoardz\footnote{vgl. \url{https://ideaboardz.com/}} ist eine freie webbasierte Anwendung zum Brainstorming, Erstellen einer ToDo-Liste oder zur Retrospektive im agilen Projektmanagement. Mit diesem Tool ist eine Zusammenarbeit möglich. Die beteiligten Personen können entweder zeitgleich oder zu verschiedenen Zeiten ortsunabhängig auf das gemeinsame Dokument zugreifen und bearbeiten. In Echtzeit zusammenarbeiten, ist bei IdeaBoardz nicht realisierbar. Das hat zur Folge, dass bei der Veränderung des Zustands keine sofortige Aktualisierung der Benutzeroberfläche erfolgt. IdeaBoardz wird unter anderem bei Brainstorming-Methode wie die 6-Hüte-Methode\footnote{engl. Six Thinking Hats} von De Bono und auch für die Ideenbewertung bekannte SWOT\footnote{steht für Strengths-Weaknesses-Opportunities-Threats-Analyse}-Analyse angewendet. Die Registrierung ist optional, so dass der Nutzer auch IdeaBoardz verwenden kann, ohne sich anzumelden.
+IdeaBoardz\footnote{vgl. \url{https://ideaboardz.com/}} ist eine freie webbasierte Anwendung zum Brainstorming, Erstellen einer ToDo-Liste oder zur Retrospektive im agilen Projektmanagement. Mit diesem Tool ist eine Zusammenarbeit möglich. Die beteiligten Personen können entweder zeitgleich oder zu verschiedenen Zeiten ortsunabhängig auf das gemeinsame Dokument zugreifen und bearbeiten. In Echtzeit zusammenarbeiten, ist bei IdeaBoardz nicht realisierbar. Das hat zur Folge, dass bei der Veränderung des Zustands keine sofortige Aktualisierung der Benutzeroberfläche erfolgt. IdeaBoardz wird unter anderem bei der Brainstorming-Methode wie die 6-Hüte-Methode\footnote{engl. Six Thinking Hats} von De Bono und auch für die Ideenbewertung bekannte SWOT\footnote{steht für Strengths-Weaknesses-Opportunities-Threats-Analyse}-Analyse angewendet. Die Registrierung ist optional, so dass der Nutzer auch IdeaBoardz verwenden kann, ohne sich anzumelden.
 
 \begin{figure}[H]
   \begin{center}
@@ -18,7 +18,7 @@ IdeaBoardz\footnote{vgl. \url{https://ideaboardz.com/}} ist eine freie webbasier
   \end{center}   
 \end{figure}
 
-Die \textbf{Abbildung \ref{fig:erstellen des eigenen ideaboards}} zeigt, wie ein IdeaBoard zu erstellen ist. Neben dem Namen des Boards werden das Thema (Description) und Formate (Format) benötigt. Es können bis zu 10 Sektionen gewählt werden und es stehen noch weitere Formate zur Verfügung, wie Pro und Contra, ToDo-Liste, Six Thinking Hats und vieles mehr. Anschließend wird ein Titel für jegliche Sektionen eingegeben.
+Die \textbf{Abbildung \ref{fig:erstellen des eigenen ideaboards}} zeigt, wie ein IdeaBoard zu erstellen ist. Neben dem Namen des Boards werden das Thema (Description) und Formate (Format) benötigt. Es können bis zu 10 Sektionen gewählt werden und es stehen außerdem noch weitere Formate zur Verfügung, wie Pro und Contra, ToDo-Liste, Six Thinking Hats und vieles mehr. Anschließend wird ein Titel für die jeweilige Sektion eingegeben.
 
 \begin{figure}[H]
   \begin{center}
@@ -28,9 +28,9 @@ Die \textbf{Abbildung \ref{fig:erstellen des eigenen ideaboards}} zeigt, wie ein
   \end{center}   
 \end{figure}
 
-Wie in \textbf{Abbildung \ref{fig:darstellung von sektionen}} zu sehen ist, sind die Eingaben in Sektionen strukturiert und farbig sortiert. Das Thema steht in der Mitte. Jede Sektion hat einen Titel und einen Plus-Button. Mit diesem Button können zu jeder Sektion neue Eingaben hinzugefügt werden. Die Eingaben werden als Karteikarten bzw. Notizzetteln visualisiert. Der weiße Hintergrund kann wie ein Whiteboard oder eine Pinnwand gesehen werden. Die Eingaben können auch von beteiligten Personen abgestimmt werden. Es ist auch möglich, die Daten nach Datum oder Abstimmung sortieren zu lassen.\bigskip
+Wie in \textbf{Abbildung \ref{fig:darstellung von sektionen}} zu sehen ist, sind die Eingaben in Sektionen strukturiert und farbig sortiert. Das Thema steht in der Mitte. Jede Sektion hat einen Titel und einen Plus-Button. Mit diesem Button können zu jeder Sektion neue Eingaben hinzugefügt werden. Die Eingaben werden als Karteikarten bzw. Notizzettel visualisiert. Der weiße Hintergrund kann wie ein Whiteboard oder eine Pinnwand gesehen werden. Die Eingaben können auch von beteiligten Personen abgestimmt werden. Es ist auch möglich, die Daten nach Datum oder Abstimmungen sortieren zu lassen.\bigskip
 
-Als weiteres Feature lassen sich die Sektionen einzeln darstellen (\textbf{Abbildung \ref{fig:darstellung einer der sektionen}}). Die Suche nach dem Eingabeinhalt und das Exportieren der Ergebnisse sowohl in eine PDF-Datei als auch in ein Excel-Dokument werden ebenfalls bei dieser Webanwendung angeboten. Die Daten können sowohl innerhalb als auch außerhalb der Sektion zusammengeführt (Merge) werden. Ebenso lassen sich die Daten aus einer Sektion anderer Daten per Drag \& Drop zuordnen, wie in \textbf{Abbildung \ref{fig:zusammenführen und zuordnen von daten}} zu sehen ist. Mit dem Teilen von URL kann das jeweilige IdeaBoardz für die Zusammenarbeit freigegeben werden.
+Als weiteres Feature lassen sich die Sektionen einzeln darstellen (\textbf{Abbildung \ref{fig:darstellung einer der sektionen}}). Die Suche nach dem Eingabeinhalt und das Exportieren der Ergebnisse sowohl als PDF-Datei als auch in ein Excel-Dokument werden ebenfalls bei dieser Webanwendung angeboten. Die Daten können sowohl innerhalb als auch außerhalb der Sektion zusammengeführt (merge) werden. Ebenso können die Daten per Drag \& Drop aus einer anderen Sektion zugeordnet werden, wie in \textbf{Abbildung \ref{fig:zusammenführen und zuordnen von daten}} zu sehen ist. Mit dem Teilen der URL kann das jeweilige IdeaBoardz für die Zusammenarbeit freigegeben werden.
 
 \begin{figure}[H]
   \begin{center}
@@ -49,10 +49,10 @@ Als weiteres Feature lassen sich die Sektionen einzeln darstellen (\textbf{Abbil
 \end{figure}
 
 \newpage
-Einige der oben dargestellten Features können für das Workshoppy-Projekt übernommen werden. Zu nennen sind:
+Einige der oben dargestellten Features können für diese Arbeit übernommen werden. Zu nennen sind:
 
 \begin{itemize}
-\item Die Eingabe wie ein Notizzettel oder Karteikarten visualisieren.
+\item Die Eingaben wie ein Notizzettel oder Karteikarten visualisieren.
 \item Die Ergebnisse als PDF-Datei exportieren.
 \item Eingaben in Sektion darstellen.
 \item Zuordnung von Daten (per Drag \& Drop).
@@ -62,11 +62,11 @@ Mit welchen Webtechnologien IdeaBoardz entwickelt wurde, lässt sich anhand der 
 
 \subsection{Miro-RealtimeBoard}
 \label{sec:miro-realtimeBoard}
-Miro\footnote{vgl. \url{https://miro.com/}} ist eine dynamische Webanwendung und handelt es sich um ein kollaborativer Online-Whiteboard in Echtzeit. Um das Online-Whiteboard nutzen zu können, wird ein Account benötigt. Dafür muss man sich bei Miro registrieren. Miro bietet die kostenlose Version an, sie ist für bis zu drei Teammitglieder und drei Boards geeignet.\bigskip
+Miro\footnote{vgl. \url{https://miro.com/}} ist eine dynamische Webanwendung und es handelt sich dabei um ein kollaboratives Online-Whiteboard in Echtzeit. Um das Online-Whiteboard nutzen zu können, wird ein Account benötigt. Dafür muss man sich bei Miro registrieren. Miro bietet die kostenlose Version an, sie ist für bis zu drei Teammitglieder und drei Boards erlaubt.\bigskip
 
-Begonnen wird mit einer leere Seite oder man verwendet eine von Miro bereitgestellten Vorlage. Zur Vorlage gehören unter anderem MindMap, Flowchart, Brainwriting und Concept Map. Einfügen neuer Dateien, Bilder und Dokumenten aus Google Drive oder vom Rechner ist auch möglich, um Informationen auszutauschen. Der Nutzer kann virtuelle Notizen erstellen. Die Notizen können sich nach Farbe unterscheiden und per Drag \& Drop über das komplette Board verschieben. Mit Hilfe von Share-Button vereinfacht Miro die Teilen-Funktion über eine URL oder einen Gmail-Account das ortsunabhängige und kollaborative Arbeiten in Echtzeit. Somit können die beteiligten Person beispielsweise während des Brainstormings auf die Ideen der anderen eingehen und kommentieren. Außerdem können die Benutzer das Whiteboard in eine Präsentation umwandeln oder in eine PDF-Datei exportieren.\bigskip
+Begonnen wird mit einer leeren Seite oder man verwendet eine von Miro bereitgestellten Vorlage. Zur Vorlage gehören unter anderem MindMap, Flowchart, Brainwriting und Concept Map. Einfügen neuer Dateien, Bilder und Dokumenten aus Google Drive oder vom Rechner ist auch möglich, um Informationen auszutauschen. Der Nutzer kann virtuelle Notizen erstellen. Die Notizen lassen sich nach Farbe unterscheiden und können per Drag \& Drop über das komplette Board verschoben werden. Mit Hilfe von Share-Button vereinfacht Miro die Teilen-Funktion über eine URL oder einen Gmail-Account das ortsunabhängige und kollaborative Arbeiten in Echtzeit. Somit können die beteiligten Personen beispielsweise während des Brainstormings auf die Ideen der anderen eingehen und kommentieren. Außerdem können die Benutzer das Whiteboard in eine Präsentation umwandeln oder als eine PDF-Datei exportieren.\bigskip
 
-Miro ist ebenfalls gut geeignet zur Umsetzung eines klassischen Brainstormings (\textbf{Abbildung \ref{fig:miro board}}). Die Ideen werden in Form von Notizen erstellt. Zusammenfassend können die Notizen nach Farben kategorisiert werden.  
+Miro ist ebenfalls gut geeignet zur Umsetzung eines Brainstormings (\textbf{Abbildung \ref{fig:miro board}}). Die Ideen werden in Form von Notizen erstellt. Zusammenfassend können die Notizen per Drag \& Drop nach Farben kategorisiert werden.  
 
 \begin{figure}[H]
   \begin{center}
@@ -86,9 +86,9 @@ Folgende Erkenntnisse wurden bei der Analyse von Miro gefunden und werden für d
 
 \subsection{MindMap}
 \label{sec:mindmap}
-MindMap\footnote{wird häufig auch Mindmapping genannt und versteht sich als Gedankenlandkarte} zählt auch zu den Favoriten unter den Kreativitätstechniken und wird häufig in vielen Workshops als Methode zur Ideenfindung und -strukturierung eingesetzt. Man kann sie beispielsweise auch für Brainstorming, Projektplanung oder Ideensammlung verwenden.\bigskip
+MindMap\footnote{wird häufig auch Mindmapping genannt und versteht sich als Gedankenlandkarte} zählt auch zu den Favoriten unter den Kreativitätstechniken und wird häufig in vielen Workshops als Methode zur Ideenfindung und -strukturierung eingesetzt. Man kann sie beispielsweise auch für das Brainstorming, die Projektplanung oder Ideensammlung verwenden.\bigskip
 
-Bei einer Mindmap werden Begriffe und deren zugehörigen Beziehungen über eine grafische Darstellung dargestellt. Das Hauptthema oder das Schlüsselwort befindet sich als Knoten kreisförmig in der Mitte. Um das Thema herum wird alles in Form von Hauptästen notiert. Man schreibt auf jeden Hauptast ein Schlüsselwort auf. Verbunden werden sie zum Hauptthema mit Linien. Die Hauptäste bilden die ersten Gedankengänge. Von jedem Hauptast zweigen weitere Nebenäste mit Begriffen ab (\textbf{Abbildung \ref{fig:mindmap}}). 
+Bei einer Mindmap werden Begriffe und deren zugehörige Beziehungen grafisch dargestellt. Das Hauptthema oder das Schlüsselwort befindet sich als Knoten kreisförmig in der Mitte. Um das Thema herum wird alles in Form von Hauptästen notiert. Man schreibt auf jeden Hauptast ein Schlüsselwort auf. Verbunden werden sie zum Hauptthema mit Linien. Die Hauptäste bilden die ersten Gedankengänge. Von jedem Hauptast zweigen weitere Nebenäste mit Begriffen ab (\textbf{Abbildung \ref{fig:mindmap}}). 
 
 \begin{figure}[H]
   \begin{center}
@@ -100,9 +100,9 @@ mindmap. Online im Internet: URL: \url{https://learningfundamentals.com.au/resou
   \end{center}   
 \end{figure}
 
-Es existieren heutzutage bereits mehrere webbasierte Mindmapping-Tools sowohl kostenlos als auch kostenpflichtig auf dem Markt. Einer von diesen ist, wie bereits im vorherigen Abschnitt vorgestellt, das \textbf{Miro-RealtimeBoard (siehe Abschnitt \ref{sec:miro-realtimeBoard})}, mit dem man Ideen visualisieren und in Echtzeit zusammenarbeiten kann. Die Übersicht zu den anderen Mindmapping-Tools kann auf dieser Webseite\footnote{\url{https://t3n.de/news/mind-mapping-online-tools-568258/}} verfolgt werden.
+Es existieren heutzutage bereits mehrere webbasierte Mindmapping-Tools sowohl kostenlos als auch kostenpflichtig auf dem Markt. Einer von diesen ist, wie bereits im vorherigen Abschnitt vorgestellt, das \textbf{Miro (siehe Abschnitt \ref{sec:miro-realtimeBoard})}, mit dem man Ideen visualisieren und in Echtzeit zusammenarbeiten kann. Die Übersicht zu den anderen Mindmapping-Tools kann auf dieser Webseite\footnote{\url{https://t3n.de/news/mind-mapping-online-tools-568258/}} verfolgt werden.
 
-Neben diesen beiden dargestellten Tools, \textbf{IdeaBoardz} und \textbf{Miro}, gibt es keine weiteren nennenswerte Anwendungen. Zwar gibt es noch zahlreiche Brainstorming-Tools, die in diesem Artikel\footnote{\url{https://tallyfy.com/brainstorming-tools/}} aufgelistet sind. Jedoch sind sie meisten visuell gleich und unterscheiden sich im funktionalen Bereich wenig. Von daher geben sie keine Anreize für diese Arbeit. 
+Neben diesen beiden dargestellten Tools, \textbf{IdeaBoardz} und \textbf{Miro}, gibt es keine weiteren nennenswerte Anwendungen. Zwar gibt es noch zahlreiche Brainstorming-Tools, die in diesem Artikel\footnote{\url{https://tallyfy.com/brainstorming-tools/}} aufgelistet. Jedoch sind sie meisten visuell gleich und unterscheiden sich im funktionalen Bereich wenig. Von daher geben sie keine Anreize für diese Arbeit. 
 
 \newpage
 \section{Erkennbare Stärken und Schwächen der Konkurrenz-Tools}
@@ -116,18 +116,18 @@ Neben diesen beiden dargestellten Tools, \textbf{IdeaBoardz} und \textbf{Miro}, 
 \item \textbf{Zusammenfügen von Daten per Drag \& Drop:}\\
 Die Daten können sowohl innerhalb als auch außerhalb einer Sektion per Drag \& Drop zusammengeführt werden.
 \item \textbf{Vote-Funktion:}\\
-Den Benutzern wird eine Schaltfläche geboten, mit der sie die Möglichkeit erhalten, Ihr Gefallen für Inhalte von anderen Usern oder von sich selbst auszudrücken. Vergleichbar wie Like-Button\footnote{Gefällt-mir Knopf} auf der Social Media Plattformen.
+Den Benutzern wird eine Schaltfläche geboten, mit der sie die Möglichkeit haben, Ihr Gefallen für Inhalte von anderen Usern oder von sich selbst auszudrücken. Vergleichbar mit einem Like-Button\footnote{Gefällt-mir Knopf} auf Social Media Plattformen.
 \item \textbf{Exportieren:}\\
-Die Ergebnisse können sowohl als PDF- oder auch als Excel-Datei gespeichert werden.
+Die Ergebnisse können sowohl als PDF- oder auch als Excel-Datei exportiert werden.
 \item \textbf{Benutzerfreundlichkeit:}\\
 Die Webanwendung ist übersichtlich dargestellt, hat eine klare Strukturierung. Sie bietet außerdem eine einfache und verständliche Navigation, hat keinen unnötigen Ballast, wie z.B. Bilder, lange Texte. Sie beinhaltet außerdem kontrastreiche Farben. Die Benutzer erreichen das Ziel mit wenig Aufwand (Klick, Zeit).
-\item \textbf{Keine Schulungsaufwand:}\\
-Die Webanwendung ist sehr verständlich und leicht zu bedienen. Der Benutzer kommt ohne Schulung gut ans sein Ziel.
+\item \textbf{Kein Schulungsaufwand:}\\
+Die Webanwendung ist sehr verständlich und leicht zu bedienen. Der Benutzer kommt ohne Schulung gut an sein Ziel.
 \item \textbf{Ohne Registrierung und nicht kostenpflichtig:}\\
 IdeaBoardz ist eine kostenlose Webanwendung. Für die Anwendung ist keine Registrierung nötig.
 \item \textbf{Responsive Webdesign:}\\
-Das Layout der Website ist flexibel gestaltet, dass dieses auf dem Tablet und Smartphone eine gleichbleibende Benutzerfreundlichkeit bietet. 
-Der Inhalt der Website wird auf dem mobilen Geräte einheitlich wie auf dem Laptop oder Desktop-Computer dargestellt.
+Das Layout der Webseite ist flexibel gestaltet, dass dieses auf dem Tablet und Smartphone eine gleichbleibende Benutzerfreundlichkeit bietet. 
+Der Inhalt der Webseite wird auf dem mobilen Gerät einheitlich wie auf dem Laptop oder Desktop-Computer dargestellt.
 \end{itemize}
 \end{itemize}
 
@@ -152,24 +152,24 @@ Beim ersten Zusammenführen sind die Daten fest geordnet, d.h. es ist unmöglich
 \begin{itemize}
 \item \textbf{Benutzerfreundlichkeit:}\\
 Die Webanwendung hat eine klare Übersicht sowie ein modernes Layout. Sie hat eine klare Strukturierung und bietet eine einfache und verständliche Navigation. Die Werkzeuge sind gut erkennbar, gut strukturiert und verständlich. Die Benutzer erreichen Ihr Ziel mit wenig Aufwand.
-\item \textbf{Keine Schulungsaufwand:}\\
-Die Webanwendung ist sehr verständlich und leicht zu bedienen. Der Benutzer kommt ohne große Bemühungen gut ans sein Ziel.
+\item \textbf{Kein Schulungsaufwand:}\\
+Die Webanwendung ist sehr verständlich und leicht zu bedienen. Die Benutzer kommen ohne große Bemühungen gut an ihr Ziel.
 \item \textbf{Exportieren:}\\
-Miro stellt dem Benutzer die Möglichkeit, die Ergebnisse in verschiedene Formate zu exportieren. Die Ergebnisse können sowohl als PDF- oder auch als CSV-Datei sowie als JPEG-Format gespeichert werden.
+Miro stellt dem Benutzer die Möglichkeit zur Verfügung, die Ergebnisse in verschiedene Formate zu exportieren. Die Ergebnisse können sowohl als PDF- oder auch als CSV- sowie als JPEG-Datei exportiert werden.
 \item \textbf{Zusammenarbeit in Echtzeit:}\\
-Mit Hilfe von Share-Button vereinfacht Miro die Teilen-Funktion über einen URL oder ein Gmail-Account das ortsunabhängigen und kollaborativen Arbeiten der Teammitglieder in Echtzeit.
+Mit Hilfe von Share-Button vereinfacht Miro die Teilen-Funktion über einen URL oder einen Gmail-Account das ortsunabhängige und kollaborative Arbeiten der Teammitglieder in Echtzeit.
 \item \textbf{Präsentationsmodus:}\\
 Die Ergebnisse können in einem Präsentationsmodus verwandeln werden.
 \item \textbf{Chatfunktion:}\\
-Die Teammitglieder können sich mittels einem eingebauten Chat Nachrichten untereinander austauschen.
+Die Teammitglieder können sich mittels einer eingebauten Chat-Funktion Nachrichten untereinander austauschen.
 \item \textbf{Hochladen von Dateien:}\\
-Fügen neue Dateien, Bilder und Dokumente aus Google Drive oder vom Rechner ist auch möglich.
+Einfügen neuer Dateien, Bilder und Dokumente aus Google Drive oder vom Rechner ist auch möglich.
 \item \textbf{Kommentar in Echtzeit hinzufügen:}\\
-Durch der eingebauten Kommentarfunktion ist es möglich, das Feedback der Mitglieder in Echtzeit zu erhalten und die Qualität der Inhalte zu verbessern. 
-\item \textbf{Verschiedene Vorlage:}\\
+Durch der eingebauten Kommentarfunktion ist es möglich, das Feedback der Mitglieder in Echtzeit zu erhalten, um die Qualität der Inhalte verbessern zu können. 
+\item \textbf{Verschiedene Vorlagen:}\\
 Der Benutzer hat die Möglichkeit, verschiedene Vorlagen, wie Mindmapping, User Story-Map, Flowchart, Concept-Map, Brainwriting sowie Wireframing zu verwenden.
 \item \textbf{Responsive Webdesign:}\\
-Das Layout der Website ist flexibel gestaltet. Das einheitliche Anzeigen von Inhalten wird auf allen Endgeräte (Laptop, Ipad, Smartphone) gewährleistet. Somit kann der Inhalt gänzlich und schnell vom Benutzer aufgenommen werden.
+Das Layout der Webseite ist flexibel gestaltet. Das einheitliche Anzeigen von Inhalten wird auf allen Endgeräten (Laptop, Tablet, Smartphone) gewährleistet. Somit kann der Inhalt gänzlich und schnell vom Benutzer aufgenommen werden.
 \end{itemize}
 \end{itemize}
 
@@ -242,7 +242,7 @@ Bei der Projektvorstellung wurde in der Firma zunächst über den Zustand der ak
 
 Wie der Abschnitt \textbf{Stand der Technik (Abschnitt \ref{sec:stand der technik})} aufgezeigt hat, existieren bereits zahlreiche webbasierte Tools für die Durchführung von Workshops.\bigskip
 
-Nach der Betrachtung der aktuellen Lösungen fällt das Fazit des Unternehmens folgendermaßen aus: Die vorhandenen Tools reichen noch nicht aus, um Workshops effektiv durchzuführen. Während \textbf{IdeaBoardz \ref{sec:ideaBoardz}} keine Zusammenarbeit in Echtzeit bieten kann, hat \textbf{Miro \ref{sec:miro-realtimeBoard}} bei der kostenlosen Version eine begrenzte Anzahl an Teammitgliedern, d.h. Workshops mit mehr als drei Teilnehmer muss deshalb die kostenpflichtige Version verwendet werden. Außerdem bereiten die aktuellen Lösungen viel Mühe in puncto Dateneingabe. Besonders auf dem Smartphone-Bildschirm ist die Dateneingabe sehr fummelig und nicht komfortabel. Das Smartphone scheint für eine Arbeit mit der aktuellen Lösungen überfordert zu sein. \bigskip
+Nach der Betrachtung der aktuellen Lösungen fällt das Fazit des Unternehmens folgendermaßen aus: Die vorhandenen Tools reichen noch nicht aus, um Workshops effektiv durchzuführen. Während \textbf{IdeaBoardz \ref{sec:ideaBoardz}} keine Zusammenarbeit in Echtzeit bieten kann, hat \textbf{Miro \ref{sec:miro-realtimeBoard}} bei der kostenlosen Version eine begrenzte Anzahl an Teammitgliedern, d.h. Workshops mit mehr als drei Teilnehmern muss deshalb die kostenpflichtige Version verwendet werden. Außerdem bereiten die aktuellen Lösungen viel Mühe in puncto Dateneingabe. Besonders auf dem Smartphone-Bildschirm ist die Dateneingabe sehr fummelig und nicht komfortabel genug. Das Smartphone scheint für eine Arbeit mit den aktuellen Lösungen noch nicht geeignet zu sein. \bigskip
 
 Als weitere und oft eingesetzte Methode zum Brainstormen in den Workshops ist das Mindmapping. Es ist eine Form, die beim Brainstorming entstehenden Ideen bildlich zu strukturieren. Jedoch hat die Mindmapping-Methode auch ihre Nachteile. Man muss sich zunächst an diese Form der Aufzeichnung gewöhnen. Denn MindMaps sehen auf den ersten Blick unübersichtlich und verschachtelt aus. Diese können sehr schnell ihre Übersichtlichkeit verlieren, wenn verschiedene Schlüsselwörter in Beziehung stehen. Demzufolge ist die Akzeptanz der Nutzer, die mit dieser Methode bzw. dieser Aufzeichnung nicht vertraut sind, eher gering. Es ist außerdem sehr zeitaufwendig, eine Mindmap exakt nach den Regeln zu erstellen. Mindmaps sind eher für den individuellen Gebrauch geeignet, da die verwendeten Schlüsselbegriffe und die Strukturierungen häufig für andere Personen unverständlich sind.\bigskip
 
@@ -252,11 +252,11 @@ Es lässt sich nicht verhindern, dass eine neue Lösung benötigt wird, um das a
 \label{sec:unternehmensanforderungen}
 In diesem Abschnitt werden die Unternehmensanforderungen an die zu entwickelnden Lösung besprochen.\bigskip
 
-Die neue Lösung soll eine benutzerfreundliche Webanwendung sein, die intuitiv bedienbar sein soll. Der Moderator übernimmt die Rolle des Administrators und ist hauptverantwortlich für die Steuerung der Webanwendung. Das Brainstorming soll in einer Sitzung (Session) durchgeführt werden. In dieser Sitzung wird versucht, möglichst viele Ideen für ein zuvor klar definiertes Problem zu produzieren. Ein Workshop sollte nicht nur auf eine Sitzung beschränken. Es sollte möglich sein, in einem Workshop mehrere Brainstorming-Sitzungen abwickeln zu können.\bigskip
+Die neue Lösung soll eine benutzerfreundliche Webanwendung sein, die intuitiv bedienbar sein soll. Der Moderator übernimmt die Rolle des Administrators und ist hauptverantwortlich für die Steuerung der Webanwendung. Das Brainstorming soll in einer Sitzung (Session) durchgeführt werden. In dieser Sitzung wird versucht, möglichst viele Ideen für ein zuvor klar definiertes Problem zu produzieren. Ein Workshop sollte sich nicht nur auf eine Sitzung beschränken. Es sollte möglich sein, in einem Workshop mehrere Brainstorming-Sitzungen abwickeln zu können.\bigskip
 
-Die teilnehmenden Personen wiederum sind nur für die inhaltlichen Beiträge zuständig. Die neue Lösung sollte so entwickelt werden, dass die Teilnehmer besonders auf Ihren Mobilgeräten ohne mühevolle Tipperei und ohne großen Aufwand Ihre Ideen abgeben können. Die Ideen sollen dann in Echtzeit für alle sichtbar dargestellt werden, welche nach der Sammlungsphase digital vom Moderator durch ein einfaches zu bedienendes User Interface zusammengefasst werden können/müssen.\bigskip
+Die teilnehmenden Personen wiederum sind nur für die inhaltlichen Beiträge zuständig. Die neue Lösung sollte so entwickelt werden, dass die Teilnehmer besonders auf Ihren Mobilgeräten ohne mühevolle Tipperei und ohne großen Aufwand Ihre Ideen abgeben können. Die Ideen sollten dann in Echtzeit für alle sichtbar dargestellt werden, welche nach der Sammlungsphase digital vom Moderator durch ein einfach zu bedienendes User Interface zusammengefasst werden können/müssen.\bigskip
 
-Die weiteren Hauptkriterien für die neue Lösung sind:
+Die weiteren Hauptkriterien für die zu entwickelnde Webanwendung sind:
 \begin{itemize}
 \item Login-Bereich (Moderator)
 \item QR-Code zur Teilnahme am Workshop (Teilnehmer)
@@ -275,34 +275,34 @@ Eine funktionale Anforderung wird nach der Definition aus dem Buch \cite{Balzert
 
 \subsection{Funktionale Anforderungen}
 \label{sec:funktionale anforderungen}
-Aus den Unternehmensanforderungen \textbf{(Abschnitt \ref{sec:unternehmensanforderungen})} lassen sich folgenden funktionalen Anforderungen ableiten.
+Aus den Unternehmensanforderungen \textbf{(Abschnitt \ref{sec:unternehmensanforderungen})} lassen sich folgende funktionale Anforderungen ableiten.
 
 \begin{enumerate}
 \item \textbf{Der Moderator soll sich über ein Anmeldeformular anmelden können.}\\
-Eine dem Moderator bekannte URL führt auf die Willkommensseite der Webanwendung. Dort wird er über ein Anmeldeformular aufgefordert, seinen Benutzernamen und Passwort einzugeben. Das System vergleicht die Eingabe mit der in Datenbank angelegten Nutzerdaten. Gelingt die Anmeldung, wird auf die Hauptseite weitergeleitet. Wenn dem System die Anmeldung nicht bekannt ist, wird eine entsprechende Fehlermeldung angezeigt und die Willkommensseite verbleibt. Für die vorliegende Arbeit werden die Nutzerdaten manuell in einem Datenbanksystem erstellt. Der Registrierungsvorgang wird für die zukünftige Weiterentwicklung im letzten Kapitel festgehalten. 
-\item \textbf{Der Moderator soll sich mittels einer Navigationselement abmelden können.}\\ 
+Eine dem Moderator bekannte URL führt auf die Willkommensseite der Webanwendung. Dort wird er über ein Anmeldeformular aufgefordert, seinen Benutzernamen und Passwort einzugeben. Das System vergleicht die Eingabe mit der in der Datenbank angelegten Nutzerdaten. Gelingt die Anmeldung, wird auf die Hauptseite weitergeleitet. Wenn dem System die Anmeldung nicht bekannt ist, wird eine entsprechende Fehlermeldung angezeigt und die Willkommensseite verbleibt. Für die vorliegende Arbeit werden die Nutzerdaten manuell in einem Datenbanksystem erstellt. Der Registrierungsvorgang wird für die zukünftige Weiterentwicklung im letzten Kapitel festgehalten. 
+\item \textbf{Der Moderator soll sich mittels eines Navigationselementes abmelden können.}\\ 
 Jede moderne Webanwendung bietet dem eingeloggten Nutzer die Möglichkeit, sich ordnungsgemäß auszuloggen. Mit dem Element \glqq Ausloggen\grqq{} in der Navigationsleiste kann sich der Moderator abmelden und er wird zur Willkommensseite weitergeleitet.
 \item \textbf{Der Moderator soll neue Workshops erstellen, sie bearbeiten und löschen können.}\\
-Der moderierende Person soll die Möglichkeit haben, neue Workshops anzulegen. Die erstellten Workshops werden in eine Liste angezeigt und sollen von dem Moderator bearbeitet und gelöscht werden können. Die Workshops sollten in einer Datenbank gespeichert werden.
+Die moderierende Person soll die Möglichkeit haben, neue Workshops anzulegen. Die erstellten Workshops werden in eine Liste angezeigt und sollten von dem Moderator bearbeitet und gelöscht werden können. Die Workshops sollten in einer Datenbank gespeichert werden.
 \item \textbf{In einem Workshop sollen eine oder mehreren Sitzungen (Sessions) für Ideenfindung und -sammlung erstellt werden können.}\\
-Eine Session versteht sich als eine Sitzung, um Lösungen für Problemstellung zu generieren, verschidene Themen aufzuarbeiten oder Entwicklung neuer Geschäftsideen sowie Innovationen zu fördern. Der Moderator soll in einem Workshop eine oder mehreren Sitzungen (Sessions) erstellt werden können. Er sollte die erstellten Sessions auch bearbeitet und gelöscht werden können. Die Sessions sollten ebenso in einer Datenbank gespeichert werden.
+Eine Session versteht sich als eine Sitzung, um Lösungen für Problemstellung zu generieren, verschidene Themen aufzuarbeiten oder Entwicklung neuer Geschäftsideen sowie Innovationen zu fördern. Der Moderator soll in einem Workshop eine oder mehreren Sitzungen (Sessions) erstellt können. Er soll auch die erstellten Sessions auch bearbeiten und löschen können. Die Sessions sollten ebenso in einer Datenbank gespeichert werden.
 \item \textbf{Die teilnehmenden Personen sollen über einen QR-Code oder eine Einladungsmail an dem jeweiligen Workshop mitwirken können.}\\
 Zu Beginn des Workshops sollte ein QR\footnote{englisch: Quick Response}-Code mittels Beamer angezeigt werden, sodass die anwesenden Teilnehmer diesen mit ihren Mobilgeräten einscannen und an diesem Workshop mitwirken können. Der Moderator sollte auch die Möglichkeit haben, auch während einer Sitzung den QR-Code einblenden zu können. Die Einladung zur Teilnahme am Workshop sollte ebenfalls auch per Mail gesendet werden können.
-\item \textbf{Die Teilnehmer sollen auf ihren Endgeräte Ihre Ideen abgeben können.}\\
-Sobald eine Sitzung eines Workshops gestartet ist, sollten auf den Endgeräten der Teilnehmer zunächst ein Eingabefeld für Benutzernamen erscheinen. Dort werden sie aufgefordert, einen Benutzernamen einzugeben. Nach der Eingabe des Benutzernamens soll eine Textarea für die Dateneingabe freigeschaltet werden. Über diese sollen die Teilnehmer Ihre Gedanken und Vorschläge frei äußern können. Außerdem sollte es den Teilnehmern möglich sein, Ihren Benutzernamen zu ändern.
-\item \textbf{Die Dateneingabe der Teilnehmer sollen auf dem Beamer in Echtzeit angezeigt werden können.} \\
-Die eingegebenen Daten der Teilnehmer sollen in Echtzeit auf der Präsentation-Seite, welche parallel über dem Beamer läuft, präsentiert werden.
+\item \textbf{Die Teilnehmer sollen auf ihren Endgeräten Ihre Ideen abgeben können.}\\
+Sobald eine Sitzung eines Workshops gestartet ist, sollte auf den Endgeräten der Teilnehmer zunächst ein Eingabefeld für den Benutzernamen erscheinen. Dort werden sie aufgefordert, ihren Benutzernamen einzugeben. Nach der Eingabe des Benutzernamens wird eine Textarea für die Dateneingabe freigeschaltet. Über diese sollen die Teilnehmer Ihre Gedanken und Vorschläge frei äußern können. Außerdem sollte es den Teilnehmern möglich sein, Ihren Benutzernamen zu ändern.
+\item \textbf{Die Dateneingabe der Teilnehmer sollen mittels Beamer in Echtzeit angezeigt werden können.} \\
+Die eingegebenen Daten der Teilnehmer sollen in Echtzeit auf der Präsentation-Seite, welche parallel mittels Beamer läuft, präsentiert werden.
 \item \textbf{Der Moderator soll die Daten in Kategorien zusammenfassen können.}\\
-Die Sammlungsphase ist beendet und der Moderator wird anschließend mit der Gruppe die Ergebnisse auswerten und sortieren. Es soll dem Moderator erlaubt sein, die Ergebnisse direkt auf der Präsentation-Seite per Drag \& Drop in Kategorien zusammenzufassen. Die erstellten Kategorien sollen bearbeitet sowie gelöscht werden können. Sie sollten auch in einer Datenbank gespeichert werden.
+Die Ideensammlungsphase ist beendet und der Moderator wird anschließend mit der Gruppe die Ergebnisse auswerten und sortieren. Es soll dem Moderator erlaubt sein, die gesammelten Ergebnisse direkt auf der Präsentation-Seite per Drag \& Drop in Kategorien zusammenzufassen. Die erstellten Kategorien sollten bearbeitet sowie gelöscht werden können. Sie sollten auch in einer Datenbank gespeichert werden.
 \item \textbf{Beim Löschen von Kategorien sollen die darin befindlichen Daten nicht betroffen sein.}\\
 Beim Löschen einer nicht leeren Kategorie, sollen die darin befindlichen Daten erhalten bleiben. Es wird nur die Kategorie gelöscht.
-\item \textbf{Die Ergebnisse sollen in eine PDF-Datei exportiert und heruntergeladen werden können.}\\
-Nach Beendigung des Workshops sollen die Daten digital von allen Sitzungen zusammengefasst und als PDF-Datei heruntergeladen werden können. Der beendete Workshop soll dann in einer separaten Liste archiviert werden.
+\item \textbf{Die Ergebnisse sollen als eine PDF-Datei exportiert und heruntergeladen werden können.}\\
+Nach Beendigung des Workshops sollen die Daten digital von allen Sitzungen zusammengefasst und als PDF-Datei heruntergeladen werden können. Der beendete Workshop sollte dann in einer separaten Liste archiviert werden.
 \end{enumerate}
 
 \subsection{Nicht-funktionale Anforderungen}
 \label{sec:nicht-funktionale anforderungen}
-Im oberen Unterkapitel wurden die funktionalen Anforderungen aufgelistet. In diesem Kapitel werden die nicht-funktionalen Anforderungen formuliert, welchen zu diesem Projekt gehören sollen.
+Im oberen Unterkapitel wurden die funktionalen Anforderungen aufgelistet. In diesem Unterkapitel werden die nicht-funktionalen Anforderungen formuliert, welche zu diesem Projekt gehören sollen.
 
 \begin{itemize}
 \item \textbf{Layout, Handhabung und Benutzbarkeit}\\
@@ -310,23 +310,23 @@ Gemessen am Funktionsumfang sollte die zu entwickelnde Anwendung ein möglichst 
 \begin{itemize}
 \item Die Verwendung der Webanwendung soll für Nutzer intuitiv sein. Der Nutzer soll mit wenigem Aufwand, ohne besondere Schulung und in kurzer Zeit durch die Webanwendung navigieren sowie sie verwenden und die wichtigen Funktionen der Webanwendung ausführen können.
 \item Bereitstellung von Hilfeleistung in Form von Hilfetexten und Tooltips zur Förderung der intuitiven Bedienbarkeit.
-\item Die Buttons sollen in unterschiedlichen Farben entsprechend der Funktionalität gestaltet werden.
+\item Die Buttons sollten in unterschiedlichen Farben entsprechend der Funktionalität gestaltet werden.
 \item Anzeigen von Bestätigungsdialogen beim Löschen von Workshops, Sessions und Kategorien sowie beim Beenden von Workshops.
-\item Die Gestaltung der Webanwendung soll einheitlich nach vorgegebenen Designvorlagen vom Unternehmen erfolgen.
+\item Die Gestaltung der Webanwendung sollte einheitlich nach vorgegebenen Designvorlagen vom Unternehmen erfolgen.
 \end{itemize}
 \item \textbf{Plattformübergreifend}\\
 Die Webanwendung soll unabhängig der Plattform funktionieren. Deshalb sollte die Webanwendung nach \textbf{responsive Webdesign} gestaltet werden. Das bedeutet, die Inhalts- und Navigationselemente sowie der strukturelle Aufbau der Webanwendung sollten sich der Bildschirmauflösung aller Endgeräte anpassen. Somit ist es für den Nutzer möglich, diese Anwendung auf verschiedenen Endgeräten zu betreiben.
 \item \textbf{Browserunabhängigkeit}\\
 Außer der Plattformunabhängigkeit sollte die Anwendung in unterschiedlichen Browsern, wie Firefox oder Chrome genutzt werden können.
 \item \textbf{Thin Client-Anwendung}\\
-Die Webanwendung soll eine Thin Client-Anwendung sein, dies bedeutet, dass die Anwendung nicht mehr auf jedem Client installiert werden muss, sondern über einen Webbrowser abrufbar und nutzbar ist. Das Updaten von Programmen sowie applikationsspezifische Funktionalitäten werden von Server zur Verfügung gestellt. Da alles über den Webbrowser abläuft, ist eine Thin Client-Anwendung hardware-, sprach- und betriebssystemunabhängig. Für JavaScript- bzw. AJAX-Anwendungen müssen keine weiteren Plug-Ins installiert werden, da die meisten Browser JavaScript unterstützen. 
+Die Webanwendung soll eine Thin Client-Anwendung sein, dies bedeutet, dass die Anwendung nicht mehr auf jedem Client installiert werden muss, sondern über einen Webbrowser nutzbar ist. Das Updaten von Programmen sowie applikationsspezifische Funktionalitäten werden von Server zur Verfügung gestellt. Da alles über den Webbrowser abläuft, ist eine Thin Client-Anwendung hardware-, sprach- und betriebssystemunabhängig. Für JavaScript- bzw. AJAX-Anwendungen müssen keine weiteren Plug-Ins installiert werden, da die meisten Browser JavaScript unterstützen. 
 \item \textbf{Performance}\\
-Die eingegeben Daten seitens der Teilnehmer sollten ohne Verzögerung auf der Präsentation-Seite angezeigt werden.
+Die eingegeben Daten seitens der Teilnehmer sollten in Echtzeit auf der Präsentation-Seite angezeigt werden.
 \end{itemize}
 
 \subsection{Muss- und Kann-Anforderungen}
 \label{muss- und kann-Anforderungen}
-Die funktionalen Anforderungen sowie nicht-funktionalen Anforderungen wurden bereits im Unterkapitel \textbf{\ref{sec:funktionale anforderungen}} und \textbf{\ref{sec:nicht-funktionale anforderungen}} dargestellt. In diesem Kapitel werden die Muss- und Kann-Anforderungen formuliert. Die Muss-Anforderung wird mit Priorität \glqq Hoch\grqq{} gekennzeichnet, für die Kann-Anforderung wird die Priorität auf \glqq Niedrig\grqq{} gesetzt.
+Die funktionalen Anforderungen sowie nicht-funktionalen Anforderungen wurden bereits im Unterkapitel \textbf{\ref{sec:funktionale anforderungen}} und \textbf{\ref{sec:nicht-funktionale anforderungen}} dargestellt. In diesem Abschnitt werden die Muss- und Kann-Anforderungen formuliert. Die Muss-Anforderung wird mit Priorität \glqq Hoch\grqq{} gekennzeichnet, für die Kann-Anforderung wird die Priorität auf \glqq Niedrig\grqq{} gesetzt.
 
 \newcolumntype{B}[1]{>{\centering\arraybackslash}m{#1}}
 \definecolor{TableHeadGray}{gray}{.8}
@@ -393,12 +393,12 @@ Die funktionalen Anforderungen sowie nicht-funktionalen Anforderungen wurden ber
 
 \section{Beispielszenario}
 \label{beispielszenario}
-In diesem Abschnitt wird die zu entwickelnden Webanwendung anhand eines Beispielszenarios näher beschrieben.\bigskip
+In diesem Abschnitt wird die zu entwickelnde Webanwendung anhand eines Beispielszenarios näher beschrieben.\bigskip
 
 Man stelle sich folgende Situation vor: Sie führen ein Unternehmen und suchen für ein Problem eine Lösung. Hier sind also die Ideen gefragt. Sie laden alle Abteilungsleiter in den Besprechungsraum ein und führen dazu einen Workshop, um die Lösungsansätze zu erarbeiten. Beim Erarbeiten von Ergebnissen spielt dabei die hierarchische Position im Unternehmen keine Rolle. In einem Workshop ist jeder \glqq gleich\grqq{}.\bigskip
 
-Sie übernehmen die Rolle eines Moderators und erläutern den teilnehmenden Personen das zu behandelnde Problem, die Regeln sowie das Ziel des Workshops. Als Werkzeug für die Durchführung des Workshops steht Ihnen die zu entwickelnden Webanwendung zur Verfügung. Bevor Sie mit dem Workshop beginnt, legen Sie bei der Webanwendung einen Workshop und die dazugehörige Session an.\bigskip
+Sie übernehmen die Rolle eines Moderators und erläutern den teilnehmenden Personen das zu behandelnde Problem, die Regeln sowie das Ziel des Workshops. Als Werkzeug für die Durchführung des Workshops steht Ihnen die zu entwickelnde Webanwendung zur Verfügung. Bevor Sie mit dem Workshop beginnen, legen Sie bei der Webanwendung einen Workshop und die dazugehörige Session an.\bigskip
 
-In diese Session findet die Ideenfindungsphase statt. Jeder der im Besprechungsraum anwesenden Teilnehmer scannt den angezeigten QR-Code ein, um an diesem Workshop teilnehmen zu können. Danach kommt jeder dran und gibt auf seinem Endgerät Ideen für die Lösung des Problems ein. Jede eingebrachte Idee wird mittels Beamer in Echtzeit präsentiert.  Die Ideenfindungsphase ist vorüber. Sie als Administrator beendet die Eingabephase auf der Webanwendung. Hier können die anwesenden Teilnehmer keine Ideen mehr eingegeben werden. Sie haben jetzt die Aufgabe, die gesammelten Ideen gemeinsam mit der Gruppe zu analysieren und anschließend zusammenzufassen. Am Ende des Workshops steht Ihnen die Ergebnisse als digitale Dokumentation bereit.
+In dieser Session findet die Ideenfindungsphase statt. Jeder der im Besprechungsraum anwesenden Teilnehmer scannt den angezeigten QR-Code ein, um an diesem Workshop teilnehmen zu können. Danach kommt jeder dran und gibt auf seinem Endgerät Ideen für die Lösung des Problems ein. Jede eingebrachte Idee wird mittels Beamer in Echtzeit präsentiert.  Die Ideenfindungsphase ist vorüber. Sie als Administrator beenden die Eingabephase auf der Webanwendung. Hier dürfen die anwesenden Teilnehmer keine Ideen mehr eingeben. Sie haben jetzt die Aufgabe, die gesammelten Ideen gemeinsam mit der Gruppe zu analysieren und anschließend zusammenzufassen. Am Ende des Workshops stehen Ihnen die Ergebnisse als digitale Dokumentation zur Verfügung.
 
 

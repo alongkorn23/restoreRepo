@@ -300,6 +300,56 @@ Zusammenfassend lässt sich sagen, dass WebSocket ein geeignetes Protokoll ist, 
 \par
 \endgroup
 
+\subsection{WAMP - Web Application Messaging Protocol}
+\label{sec:wamp}
+Das Web Application Messaging Protocol (WAMP) ist ein standardisiertes und unterstütztes WebSocket-Unterprotokoll, welches Entwicklern die richtige Semantik bietet, die sie benötigen, um Kommunikation zwischen Komponenten in verteilten Anwendungen auf bequeme Art und Weise zu handhaben. WAMP vereinigt zwei grundlegende Kommunikationsmuster zu einem Protokoll: das Publisher-Subscriber-Muster \textbf{(PubSub)} und Remote Procedure Calls \textbf{(RPC)}. WAMP ist ein geroutetes Protokoll, bei dem alle Komponenten eine Verbindung zu einem WAMP-Router aufbauen. Der WAMP-Router, wird auch als Broker bezeichnet, übernimmt die zentrale Aufgabe des Annehmens und Verteilens von Anfragen. Eine Komponente steht für ein Programm, dass eine Verbindung zum Router aufbaut und anschließend Anfragen über RPC und PubSub stellen kann.(vgl. \cite{wamp})\bigskip
+
+\par
+\begingroup
+\leftskip=4em % Parameter anpassen
+\rightskip\leftskip
+\noindent \glqq WAMP basierte ursprünglich auf dem WebSocket-Protokoll, welches eine bidirektionale Verbindung zwischen zwei Teilnehmern mit geringen Latenzen ermöglicht. Heute ist WAMP von WebSocket unabhängig, auch wenn beide Protokolle noch häufig gemeinsam genutzt werden.\grqq{}\footnote{\url{https://www.it-times.de/news/wamp-was-hinter-dem-web-application-messaging-protocol-steckt-118608/} (abgerufen am 26.08.2019)}
+\par
+\endgroup
+
+\begin{itemize}
+\item \textbf{Publish-Subscribe}\\
+Das PubSub-Muster besteht aus einem Publisher (Verteiler) und vielen Subscribers (Abonnenten). Die Abonnenten haben die Möglichkeit, alle an sie gerichteten Nachrichten zu empfangen oder bestimmte Nachrichten zu abonnieren, die als Themen (Topics) bezeichnet werden. Das PubSub-Muster hat vor allem den Vorteil, dass ein Broker (Vermittler) zur Trennung von Verteiler und Abonnenten verwendet wird \textbf{(Abbildung \ref{fig:PubSub-Muster})}. Aus dem Grund benötigt der Verteiler und die Abonnenten keine gegenseitige Kenntnis. Dies vereinfacht die Implementierung und verbessert die Skalierbarkeit. Es gibt drei Abonnement-Ansätze, die eingesetzt werden können. In einer Web-Architektur, die einen Broker hat, übernimmt der Broker selbst das Nachrichten-Routing anstelle des Servers. In einer brokerlosen Architektur empfängt der Server die Themenanforderung und liefert die Nachrichten an diejenigen Clients, die eine Themenanforderung gestellt haben. Im dritten Ansatz empfangen die Clients alle Nachrichten vom Server und filtern die Nachrichten, die sie nicht benötigen. Der Nachteil bei diesem dritten Ansatz ist, dass er nicht skalierbar ist. (vgl. \cite{edu2018})\bigskip
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.4]{img/pub_sub}
+	\caption{Publish-Subscribe Pattern}
+	\footnotesize\sffamily\textbf{Quelle:} \url{https://blog.felix-seifert.com/web-application-messaging-protocol/} 
+	\label{fig:PubSub-Muster}
+  \end{center}   
+\end{figure}
+
+Dabei werden die Topics im WAMP Protokoll über eine sogenannte Uniform Ressource Identifier (URI) beschrieben\footnote{vgl. \url{https://crossbar.io/docs/URI-Format/}}, wie zum Beispiel:
+\begin{itemize}
+\item com.myapp.topicA
+\item com.myapp.topicB
+\end{itemize}
+Jene URIs dienen zur Identifizierung von Topics oder auch Remote Procedure Calls Methoden.
+
+\item \textbf{Remote Procedure Calls}\\
+Neben dem PubSub-Muster unterstützt das WAMP Protokoll auch das Remote Procedure Calls (RPC). Das RPC-Muster ermöglicht es, einem Programm mit einem anderen Programm in einem unterschiedlichen Netzwerk zu kommunizieren. Das RPC-Nachrichtenprotokoll besteht aus einer Anruf- und einer Antwortnachricht. In dieser Architektur sendet ein Client eine RPC-Anfrage an einen Server. Der Server sendet die Ergebnisse an den Client zurück. (vgl. \cite{edu2018})\bigskip
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.4]{img/rpc}
+	\caption{Remote Procedure Call}
+	\footnotesize\sffamily\textbf{Quelle:} \url{https://blog.felix-seifert.com/web-application-messaging-protocol/} 
+	\label{fig:rpc}
+  \end{center}   
+\end{figure}
+
+Die \textbf{Abbildung \ref{fig:rpc}} beschreibt den Ablauf einer RPC-Anfrage im WAMP Protokoll. Dabei ist zu erkennen, dass auch beim RPC-Muster einen Router zum Einsatz kommt, der Anrufe entgegennimmt. Nachdem der Router einen Anruf erhalten hat, leitet er diesen Anruf an den entsprechenden Angerufenen (Callee) weiter. Dieser Angerufene bearbeitet die empfangenen Anfragen und sendet die Ergebnisse an den Router, der sie direkt an den Anrufer (Caller) weiterleitet. Um dem Router die Adresse des Angerufenen mitzuteilen, muss eine entfernte Prozedur beim Router registriert werden. Somit müssen weder der Anrufer (Caller) noch der Angerufene (Callee) die Adresse des anderen Teilnehmers kennen.\bigskip
+
+Das in WAMP verwendete Standard-Transportprotokoll ist Websocket. Mit Websocket-Transport ist es möglich, eine dauerhafte bidirektionale Verbindung herzustellen. WAMP ist nicht auf die Unterstützung von Webanwendungen beschränkt. Es ist eine geeignete Lösung für verteilte Anwendungen. Ein besonderer Vorteil des WAMP ist, dass es die Trennung von Komponenten unterstützt, die miteinander kommunizieren müssen. Eine direkte Kommunikation ist nicht erforderlich, da der. Router die Nachrichtenverteilung übernimmt. Außerdem ist WAMP sprachunabhängig, daher beschränkt es sich nicht auf eine bestimmte Programmiersprache. (vgl. \cite{edu2018})
+
+\end{itemize}
+
 \subsection{jQuery}
 \label{sec:jQuery}
 jQuery ist eine JavaScript-Bibliothek, die Klassen und Methoden zur Verfügung stellt, um die Arbeit mit JavaScript zu vereinfachen. jQuery ist nicht nur kompakter und komfortabler als JavaScript, sondern außerdem browserübergreifend, was bei JavaScript in der Vergangenheit nicht immer der Fall war. jQuery vereinfacht viele JavaScript-Funktionen, die bei der Webentwicklung oft verwendet wird. Wie JavaScript ermöglicht jQuery auch den Zugriff auf DOM-Elemente, die gezielt angesprochen und manipuliert werden können. (vgl. \cite{Ste2019})\bigskip
@@ -317,7 +367,6 @@ Das DOM versteht sich als die Schnittstelle für den Zugriff auf den Tags, Attri
   \end{center}   
 \end{figure}
 
-\newpage
 Weitere jQuery-Funktion:
 \begin{itemize}
 \item Event Handling
@@ -353,7 +402,7 @@ Das Web 2.0 wird als \glqq Mitmach-Netz\grqq{} verstanden. Es ist eine Revolutio
 
 Beim Web 2.0 handelt es sich dabei nicht um eine neue Technologie, sondern vielmehr um die Weiterentwicklung des Internets. Dazu zählt beispielsweise der vermehrte Einsatz der AJAX-Technologie, die eine asynchrone Datenübertragung zwischen Client und Server ermöglicht. Oder der Einsatz von Abonnementdiensten (Web-Feeds), welche eine grundlegende Eigenschaft für die neue Generation des World Wide Webs sind. (vgl. \cite{o.V.2008})\bigskip
 
-Der Begriff Web 2.0 ist durch seinen Artikel \glqq What is Web 2.0\grqq{} von amerikanischen Verleger Tim O’Reilly in 2005 bekannt geworden\footnote{vgl. \url{https://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html}}.
+Der Begriff Web 2.0 ist durch seinen Artikel \glqq What is Web 2.0\grqq{} von amerikanischen Verleger Tim O’Reilly in 2005 bekannt geworden\footnote{vgl. \url{https://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html}}.\bigskip
 
 \begin{figure}[H]
   \begin{center}
@@ -364,7 +413,8 @@ Der Begriff Web 2.0 ist durch seinen Artikel \glqq What is Web 2.0\grqq{} von am
   \end{center}   
 \end{figure}
 
-\textbf{Die Abbildung \ref{fig:web2_map}} zeigt ein Konzept von Web 2.0, die mit einem Brainstorming zwischen O’Reilly und MediaLive International entwickelt wurde. \textbf{Die Abbildung \ref{fig:Web1vsWeb2}} beschreibt einige Beispiele für die Bedeutung von Web 2.0, die im ersten Brainstorming zwischen O’Reilly und MediaLive International formuliert wurde.
+\newpage
+Die \textbf{Abbildung \ref{fig:web2_map}} zeigt ein Konzept von Web 2.0, die mit einem Brainstorming zwischen O’Reilly und MediaLive International entwickelt wurde. Die \textbf{Abbildung \ref{fig:Web1vsWeb2}} beschreibt einige Beispiele für die Bedeutung von Web 2.0, die im ersten Brainstorming zwischen O’Reilly und MediaLive International formuliert wurde.
 
 \begin{figure}[H]
   \begin{center}
@@ -375,7 +425,6 @@ Der Begriff Web 2.0 ist durch seinen Artikel \glqq What is Web 2.0\grqq{} von am
   \end{center}   
 \end{figure}
 
-\newpage
 Außerdem stellte O’Reilly sieben Merkmale vor, die kennzeichnend für Web 2.0 sind:
 
 \begin{itemize}
@@ -415,7 +464,6 @@ Außerdem stellte O’Reilly sieben Merkmale vor, die kennzeichnend für Web 2.0
 \end{itemize}
 \end{itemize}
 
-\newpage
 \section{Rich Internet Applications}
 \label{sec:rich internet applications}
 Die klassischen Webanwendungen schicken generell die Formulareingaben vom Nutzer an einen Webserver. Als Rückgabe vom Webserver bekommt der Client, in diesem Fall der Webbrowser, eine neu generierte Webseite gemäß dem zuvor eingegebenen Daten. Bei jeder Anfrage des Clients wird die komplette Webseite neu generiert und übertragen. Demzufolge werden solche Webanwendungen als wenig intuitiv bezeichnet und können sich auch nachteilig auf die Geschwindigkeit sowie schlechte User-Experiences führen.\bigskip

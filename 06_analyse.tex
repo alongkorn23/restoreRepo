@@ -8,7 +8,7 @@ Bei der Suche nach öffentlich zugänglichen Tools für die Durchführung von Wo
 
 \subsection{IdeaBoardz}
 \label{sec:ideaBoardz}
-IdeaBoardz\footnote{vgl. \url{https://ideaboardz.com/}} ist eine freie webbasierte Anwendung zum Brainstorming, Erstellen einer ToDo-Liste oder zur Retrospektive im agilen Projektmanagement. Mit diesem Tool ist eine Zusammenarbeit möglich. Die beteiligten Personen können entweder zeitgleich oder zu verschiedenen Zeiten ortsunabhängig auf das gemeinsame Dokument zugreifen und bearbeiten. In Echtzeit zusammenarbeiten, ist bei IdeaBoardz nicht realisierbar. Das hat zur Folge, dass bei der Veränderung des Zustands keine sofortige Aktualisierung der Benutzeroberfläche erfolgt. IdeaBoardz wird unter anderem bei der Brainstorming-Methode wie die 6-Hüte-Methode\footnote{engl. Six Thinking Hats} von De Bono und auch für die Ideenbewertung bekannte SWOT\footnote{steht für Strengths-Weaknesses-Opportunities-Threats-Analyse}-Analyse angewendet. Die Registrierung ist optional, so dass der Nutzer auch IdeaBoardz verwenden kann, ohne sich anzumelden.
+IdeaBoardz\footnote{vgl. \url{https://ideaboardz.com/}} ist eine freie webbasierte Anwendung zum Brainstorming, Erstellen einer ToDo-Liste oder zur Retrospektive im agilen Projektmanagement. Mit diesem Tool ist eine Zusammenarbeit möglich. Die beteiligten Personen können entweder zeitgleich oder zu verschiedenen Zeiten ortsunabhängig auf das gemeinsame Dokument zugreifen und bearbeiten. In Echtzeit zusammenarbeiten, ist bei IdeaBoardz nicht möglich. Bei zeitgleichem Bearbeiten gemeinsamer Dokumente erfolgt keine \glqq sofortige\grqq{} Aktualisierung der Benutzeroberfläche. Die Datenaktualisierung erscheint jedoch erst nach 2-3 Sekunden auf der Benutzeroberfläche. Wie schnell die Datenaktualisierung erfolgt, hängt von der Schnelligkeit des Internets ab. Eine Echtzeitsynchronisation konnte nach mehrmaliger Anwendungen nicht festgestellt werden. IdeaBoardz wird unter anderem bei der Brainstorming-Methode wie die 6-Hüte-Methode\footnote{engl. Six Thinking Hats} von De Bono und auch für die Ideenbewertung bekannte SWOT\footnote{steht für Strengths-Weaknesses-Opportunities-Threats-Analyse}-Analyse angewendet. Die Registrierung ist optional, so dass der Nutzer auch IdeaBoardz verwenden kann, ohne sich anzumelden.
 
 \begin{figure}[H]
   \begin{center}
@@ -76,11 +76,10 @@ Miro ist ebenfalls gut geeignet zur Umsetzung eines Brainstormings (\textbf{Abbi
   \end{center}   
 \end{figure}
 
-Folgende Erkenntnisse wurden bei der Analyse von Miro gefunden und werden für das Workshoppy-Projekt übernommen: 
+Folgende Technologien wurden bei der Analyse gefunden und werden für die vorliegende Arbeit umgesetzt: 
 \begin{itemize}
-\item AJAX-Anwendung
+\item Echtzeitsytem
 \item Thin Client-Anwendung
-\item Web 2.0-Anwendung
 \item Rich Internet Applications
 \end{itemize}
 
@@ -122,7 +121,7 @@ Die Ergebnisse können sowohl als PDF- oder auch als Excel-Datei exportiert werd
 \item \textbf{Benutzerfreundlichkeit:}\\
 Die Webanwendung ist übersichtlich dargestellt, hat eine klare Strukturierung. Sie bietet außerdem eine einfache und verständliche Navigation, hat keinen unnötigen Ballast, wie z.B. Bilder, lange Texte. Sie beinhaltet außerdem kontrastreiche Farben. Die Benutzer erreichen das Ziel mit wenig Aufwand (Klick, Zeit).
 \item \textbf{Kein Schulungsaufwand:}\\
-Die Webanwendung ist sehr verständlich und leicht zu bedienen. Der Benutzer kommt ohne Schulung gut an sein Ziel.
+Nach meiner Einschätzung ist die Webanwendung verständlich und leicht zu bedienen. Der Benutzer könnte meiner Meinung nach ohne Schulung gut an sein Ziel kommen.
 \item \textbf{Ohne Registrierung und nicht kostenpflichtig:}\\
 IdeaBoardz ist eine kostenlose Webanwendung. Für die Anwendung ist keine Registrierung nötig.
 \item \textbf{Responsive Webdesign:}\\
@@ -233,7 +232,7 @@ Auf der obersten Ebene steht das Projekt. Eine Ebene darunter die Teilprojekte o
   \end{center}   
 \end{figure}
 
-Die Konkurrenz-Tools und eine Analyse von funktionalen, nicht-funktionalen Anforderungen sowie die Muss- und Kann-Anforderungen werden in der ersten Phase untersucht. Durch diese Analyse wird die Struktur und ein passendes Layout der Webanwendung erstellt. Die daraus entstehende Designentscheidung wird technisch in eine Webanwendung umgesetzt und am Ende wird die Webanwendung anhand eines selbst erstellten Bewertungsformulars von den Mitarbeiter im Unternehmen (mindestens 2 Personen) bewertet.
+Die Konkurrenz-Tools und eine Analyse von funktionalen, nicht-funktionalen Anforderungen sowie die Muss- und Kann-Anforderungen werden in der ersten Phase untersucht. Durch diese Analyse wird die Struktur und ein passendes Layout der Webanwendung erstellt. Die daraus entstehende Designentscheidung wird technisch in eine Webanwendung umgesetzt und am Ende wird die Webanwendung anhand eines Fragebogens von den Mitarbeiter im Unternehmen (mindestens 2 Personen) bewertet.
 
 \newpage
 \section{Ist-Analyse}
@@ -242,7 +241,7 @@ Bei der Projektvorstellung wurde in der Firma zunächst über den Zustand der ak
 
 Wie der Abschnitt \textbf{Stand der Technik (Abschnitt \ref{sec:stand der technik})} aufgezeigt hat, existieren bereits zahlreiche webbasierte Tools für die Durchführung von Workshops.\bigskip
 
-Nach der Betrachtung der aktuellen Lösungen fällt das Fazit des Unternehmens folgendermaßen aus: Die vorhandenen Tools reichen noch nicht aus, um Workshops effektiv durchzuführen. Während \textbf{IdeaBoardz \ref{sec:ideaBoardz}} keine Zusammenarbeit in Echtzeit bieten kann, hat \textbf{Miro \ref{sec:miro-realtimeBoard}} bei der kostenlosen Version eine begrenzte Anzahl an Teammitgliedern, d.h. Workshops mit mehr als drei Teilnehmern muss deshalb die kostenpflichtige Version verwendet werden. Außerdem bereiten die aktuellen Lösungen viel Mühe in puncto Dateneingabe. Besonders auf dem Smartphone-Bildschirm ist die Dateneingabe sehr fummelig und nicht komfortabel genug. Das Smartphone scheint für eine Arbeit mit den aktuellen Lösungen noch nicht geeignet zu sein. \bigskip
+Nach der Gruppendiskussion, in der sich der Projektleiter, der Auftraggeber und der Geschäftsführer des Unternehmens teilgenommen haben, fällt das Fazit bei der Betrachtung der aktuellen Lösungen folgendermaßen aus: Die vorhandenen Tools reichen noch nicht aus, um Workshops effektiv durchzuführen. Während \textbf{IdeaBoardz \ref{sec:ideaBoardz}} keine Zusammenarbeit in Echtzeit bieten kann, hat \textbf{Miro \ref{sec:miro-realtimeBoard}} bei der kostenlosen Version eine begrenzte Anzahl an Teammitgliedern, d.h. Workshops mit mehr als drei Teilnehmern muss deshalb die kostenpflichtige Version verwendet werden. Außerdem bereiten die aktuellen Lösungen viel Mühe in puncto Dateneingabe. Besonders auf dem Smartphone-Bildschirm ist die Dateneingabe sehr fummelig und nicht komfortabel genug. Das Smartphone scheint für eine Arbeit mit den aktuellen Lösungen noch nicht geeignet zu sein. \bigskip
 
 Als weitere und oft eingesetzte Methode zum Brainstormen in den Workshops ist das Mindmapping. Es ist eine Form, die beim Brainstorming entstehenden Ideen bildlich zu strukturieren. Jedoch hat die Mindmapping-Methode auch ihre Nachteile. Man muss sich zunächst an diese Form der Aufzeichnung gewöhnen. Denn MindMaps sehen auf den ersten Blick unübersichtlich und verschachtelt aus. Diese können sehr schnell ihre Übersichtlichkeit verlieren, wenn verschiedene Schlüsselwörter in Beziehung stehen. Demzufolge ist die Akzeptanz der Nutzer, die mit dieser Methode bzw. dieser Aufzeichnung nicht vertraut sind, eher gering. Es ist außerdem sehr zeitaufwendig, eine Mindmap exakt nach den Regeln zu erstellen. Mindmaps sind eher für den individuellen Gebrauch geeignet, da die verwendeten Schlüsselbegriffe und die Strukturierungen häufig für andere Personen unverständlich sind.\bigskip
 
@@ -250,9 +249,9 @@ Es lässt sich nicht verhindern, dass eine neue Lösung benötigt wird, um das a
 
 \section{Unternehmensanforderungen}
 \label{sec:unternehmensanforderungen}
-In diesem Abschnitt werden die Unternehmensanforderungen an die zu entwickelnden Lösung besprochen.\bigskip
+In diesem Abschnitt werden die Unternehmensanforderungen an die zu entwickelnden Lösung besprochen. Die Unternehmensanforderung entstand aus den Erfahrungen des Auftraggeber, welcher aus Vertraulichkeitsgründen namentlich nicht genannt wird. Er hat nämlich in seiner Karriere etliche Workshops mitgemacht und auch welche selbst durchgeführt. Dabei erkannte er, dass es noch keine geeigneten Anwendungsprogrammen für die Durchführung von Workshops auf dem Markt gibt. Aus diesem Grund soll eine neue Webanwendung für die Durchführung von Workshops entwickelt wetrden, welche benutzerfreundliche ist und intuitiv bedienbar sein soll.\bigskip
 
-Die neue Lösung soll eine benutzerfreundliche Webanwendung sein, die intuitiv bedienbar sein soll. Der Moderator übernimmt die Rolle des Administrators und ist hauptverantwortlich für die Steuerung der Webanwendung. Das Brainstorming soll in einer Sitzung (Session) durchgeführt werden. In dieser Sitzung wird versucht, möglichst viele Ideen für ein zuvor klar definiertes Problem zu produzieren. Ein Workshop sollte sich nicht nur auf eine Sitzung beschränken. Es sollte möglich sein, in einem Workshop mehrere Brainstorming-Sitzungen abwickeln zu können.\bigskip
+Der Moderator übernimmt die Rolle des Administrators und ist hauptverantwortlich für die Steuerung der Webanwendung. Das Brainstorming soll in einer Sitzung (Session) durchgeführt werden. In dieser Sitzung wird versucht, möglichst viele Ideen für ein zuvor klar definiertes Problem zu produzieren. Ein Workshop sollte sich nicht nur auf eine Sitzung beschränken. Es sollte möglich sein, in einem Workshop mehrere Brainstorming-Sitzungen abwickeln zu können.\bigskip
 
 Die teilnehmenden Personen wiederum sind nur für die inhaltlichen Beiträge zuständig. Die neue Lösung sollte so entwickelt werden, dass die Teilnehmer besonders auf Ihren Mobilgeräten ohne mühevolle Tipperei und ohne großen Aufwand Ihre Ideen abgeben können. Die Ideen sollten dann in Echtzeit für alle sichtbar dargestellt werden, welche nach der Sammlungsphase digital vom Moderator durch ein einfach zu bedienendes User Interface zusammengefasst werden können/müssen.\bigskip
 
@@ -266,6 +265,16 @@ Die weiteren Hauptkriterien für die zu entwickelnde Webanwendung sind:
 \item Browserunabhängigkeit
 \item Export der Ergebnisse in eine PDF-Datei
 \end{itemize}
+
+\section{Beispielszenario}
+\label{beispielszenario}
+In diesem Abschnitt wird die zu entwickelnde Webanwendung anhand eines Beispielszenarios näher beschrieben.\bigskip
+
+Man stelle sich folgende Situation vor: Sie führen ein Unternehmen und suchen für ein Problem eine Lösung. Hier sind also die Ideen gefragt. Sie laden alle Abteilungsleiter in den Besprechungsraum ein und führen dazu einen Workshop, um die Lösungsansätze zu erarbeiten. Beim Erarbeiten von Ergebnissen spielt dabei die hierarchische Position im Unternehmen keine Rolle. In einem Workshop ist jeder \glqq gleich\grqq{}.\bigskip
+
+Sie übernehmen die Rolle eines Moderators und erläutern den teilnehmenden Personen das zu behandelnde Problem, die Regeln sowie das Ziel des Workshops. Als Werkzeug für die Durchführung des Workshops steht Ihnen die zu entwickelnde Webanwendung zur Verfügung. Bevor Sie mit dem Workshop beginnen, legen Sie bei der Webanwendung einen Workshop und die dazugehörige Session an.\bigskip
+
+In dieser Session findet die Ideenfindungsphase statt. Jeder der im Besprechungsraum anwesenden Teilnehmer scannt den angezeigten QR-Code ein, um an diesem Workshop teilnehmen zu können. Danach kommt jeder dran und gibt auf seinem Endgerät Ideen für die Lösung des Problems ein. Jede eingebrachte Idee wird mittels Beamer in Echtzeit präsentiert.  Die Ideenfindungsphase ist vorüber. Sie als Administrator beenden die Eingabephase auf der Webanwendung. Hier dürfen die anwesenden Teilnehmer keine Ideen mehr eingeben. Sie haben jetzt die Aufgabe, die gesammelten Ideen gemeinsam mit der Gruppe zu analysieren und anschließend zusammenzufassen. Am Ende des Workshops stehen Ihnen die Ergebnisse als digitale Dokumentation zur Verfügung.
 
 \section{Anforderungsanalyse}
 \label{sec:anforderungsanalyse}
@@ -298,6 +307,10 @@ Die Ideensammlungsphase ist beendet und der Moderator wird anschließend mit der
 Beim Löschen einer nicht leeren Kategorie, sollen die darin befindlichen Daten erhalten bleiben. Es wird nur die Kategorie gelöscht.
 \item \textbf{Die Ergebnisse sollen als eine PDF-Datei exportiert und heruntergeladen werden können.}\\
 Nach Beendigung des Workshops sollen die Daten digital von allen Sitzungen zusammengefasst und als PDF-Datei heruntergeladen werden können. Der beendete Workshop sollte dann in einer separaten Liste archiviert werden.
+\item \textbf{Hilfeleistung soll dem Benuter bereitgestellt werden.}\\
+Bereitstellung von Hilfeleistung in Form von Hilfetexten und Tooltips zur Förderung der intuitiven Bedienbarkeit.
+\item \textbf{Bevor der Benutzer eine Aktion auslöst, sollte einen Bestätigungsdialog angezeigt werden.}\\
+Anzeigen von Bestätigungsdialogen vor allem beim Löschen von Workshops, Sessions und Kategorien sowie beim Beenden von Workshops.
 \end{enumerate}
 
 \subsection{Nicht-funktionale Anforderungen}
@@ -309,9 +322,7 @@ Im oberen Unterkapitel wurden die funktionalen Anforderungen aufgelistet. In die
 Gemessen am Funktionsumfang sollte die zu entwickelnde Anwendung ein möglichst strukturiertes, einfaches und bedienerfreundliches Layout besitzen. Beim Entwurf und der Entwicklung der Anwendung sollten deshalb die folgenden Punkte beachtet werden:
 \begin{itemize}
 \item Die Verwendung der Webanwendung soll für Nutzer intuitiv sein. Der Nutzer soll mit wenigem Aufwand, ohne besondere Schulung und in kurzer Zeit durch die Webanwendung navigieren sowie sie verwenden und die wichtigen Funktionen der Webanwendung ausführen können.
-\item Bereitstellung von Hilfeleistung in Form von Hilfetexten und Tooltips zur Förderung der intuitiven Bedienbarkeit.
 \item Die Buttons sollten in unterschiedlichen Farben entsprechend der Funktionalität gestaltet werden.
-\item Anzeigen von Bestätigungsdialogen beim Löschen von Workshops, Sessions und Kategorien sowie beim Beenden von Workshops.
 \item Die Gestaltung der Webanwendung sollte einheitlich nach vorgegebenen Designvorlagen vom Unternehmen erfolgen.
 \end{itemize}
 \item \textbf{Plattformübergreifend}\\
@@ -321,7 +332,7 @@ Außer der Plattformunabhängigkeit sollte die Anwendung in unterschiedlichen Br
 \item \textbf{Thin Client-Anwendung}\\
 Die Webanwendung soll eine Thin Client-Anwendung sein, dies bedeutet, dass die Anwendung nicht mehr auf jedem Client installiert werden muss, sondern über einen Webbrowser nutzbar ist. Das Updaten von Programmen sowie applikationsspezifische Funktionalitäten werden von Server zur Verfügung gestellt. Da alles über den Webbrowser abläuft, ist eine Thin Client-Anwendung hardware-, sprach- und betriebssystemunabhängig. Für JavaScript- bzw. AJAX-Anwendungen müssen keine weiteren Plug-Ins installiert werden, da die meisten Browser JavaScript unterstützen. 
 \item \textbf{Performance}\\
-Die eingegeben Daten seitens der Teilnehmer sollten in Echtzeit auf der Präsentation-Seite angezeigt werden.
+Da die vorliegende Arbeit um eine Echtzeitanwendung handelt, sollten die eingegeben Daten der Teilnehmern in Echtzeit auf der Präsentation-Seite angezeigt werden.
 \end{itemize}
 
 \subsection{Muss- und Kann-Anforderungen}
@@ -372,13 +383,13 @@ Die funktionalen Anforderungen sowie nicht-funktionalen Anforderungen wurden ber
 	\hline
 	NFA & Performance & \textbf{Hoch}\\
 	\hline
-	NFA & Anzeigen von Bestätigungsdialogen beim Löschen von Workshops, Sessions und Kategorien sowie beim Beenden von Workshops & \textbf{Hoch}\\
+	FA & Anzeigen von Bestätigungsdialogen beim Löschen von Workshops, Sessions und Kategorien sowie beim Beenden von Workshops & \textbf{Hoch}\\
 	\hline
 	NFA & Thin Client-Anwendung & \textbf{Hoch}\\
 	\hline
 	FA & Einladungsmail zur Teilnahme am Workshop & \textbf{Niedrig}\\
 	\hline
-	NFA & Bereitstellung von Hilfeleistung in Form von Hilfetexten und Tooltips zur Förderung der intuitiven Bedienbarkeit & \textbf{Niedrig}\\
+	FA & Bereitstellung von Hilfeleistung in Form von Hilfetexten und Tooltips zur Förderung der intuitiven Bedienbarkeit & \textbf{Niedrig}\\
 	\hline
 	NFA & Die Buttons sollen in unterschiedlichen Farben entsprechend der Funktionalität gestaltet werden & \textbf{Niedrig}\\
 	\hline
@@ -390,15 +401,3 @@ Die funktionalen Anforderungen sowie nicht-funktionalen Anforderungen wurden ber
 	 NFA = Nicht-funktionale Anforderung 
 	 \label{tab:muss- und kann-anforderungen}
 \end{table}
-
-\section{Beispielszenario}
-\label{beispielszenario}
-In diesem Abschnitt wird die zu entwickelnde Webanwendung anhand eines Beispielszenarios näher beschrieben.\bigskip
-
-Man stelle sich folgende Situation vor: Sie führen ein Unternehmen und suchen für ein Problem eine Lösung. Hier sind also die Ideen gefragt. Sie laden alle Abteilungsleiter in den Besprechungsraum ein und führen dazu einen Workshop, um die Lösungsansätze zu erarbeiten. Beim Erarbeiten von Ergebnissen spielt dabei die hierarchische Position im Unternehmen keine Rolle. In einem Workshop ist jeder \glqq gleich\grqq{}.\bigskip
-
-Sie übernehmen die Rolle eines Moderators und erläutern den teilnehmenden Personen das zu behandelnde Problem, die Regeln sowie das Ziel des Workshops. Als Werkzeug für die Durchführung des Workshops steht Ihnen die zu entwickelnde Webanwendung zur Verfügung. Bevor Sie mit dem Workshop beginnen, legen Sie bei der Webanwendung einen Workshop und die dazugehörige Session an.\bigskip
-
-In dieser Session findet die Ideenfindungsphase statt. Jeder der im Besprechungsraum anwesenden Teilnehmer scannt den angezeigten QR-Code ein, um an diesem Workshop teilnehmen zu können. Danach kommt jeder dran und gibt auf seinem Endgerät Ideen für die Lösung des Problems ein. Jede eingebrachte Idee wird mittels Beamer in Echtzeit präsentiert.  Die Ideenfindungsphase ist vorüber. Sie als Administrator beenden die Eingabephase auf der Webanwendung. Hier dürfen die anwesenden Teilnehmer keine Ideen mehr eingeben. Sie haben jetzt die Aufgabe, die gesammelten Ideen gemeinsam mit der Gruppe zu analysieren und anschließend zusammenzufassen. Am Ende des Workshops stehen Ihnen die Ergebnisse als digitale Dokumentation zur Verfügung.
-
-

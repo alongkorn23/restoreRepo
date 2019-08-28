@@ -39,7 +39,7 @@ Während HTML den Aufbau bzw. die Struktur der Webseite bestimmt, ist CSS für d
 \subsection{Bootstrap}
 \label{subsec:bootstrap}
 Um ein einheitliches Erscheinungsbild für die Webanwendung zu erhalten, verwende ich das kostenlose und quelloffene Frontend-Framework namens Bootstrap.
-Das Framework stellt verschiedene HTML- und CSS-Gestaltungsvorlagen für Formulare, Buttons, Tabellen, Navigation, Typografie sowie das Grid-System für Layouts zur Verfügung. Durch ein JavaScript-Modul ist es möglich, die Interaktionen auf der Webanwendung einzubinden. Außerdem bietet Bootstrap alle Voraussetzungen für ein responsives Webdesign, um die Webanwendung auf allen Geräten (Desktop, Smartphone und Tablet) einheitlich und optimal darzustellen.
+Das Framework stellt verschiedene HTML- und CSS-Gestaltungsvorl\-agen für Formulare, Buttons, Tabellen, Navigation, Typografie sowie das Grid-System für Layouts zur Verfügung. Durch ein JavaScript-Modul ist es möglich, die Interaktionen auf der Webanwendung einzubinden. Außerdem bietet Bootstrap alle Voraussetzungen für ein responsives Webdesign, um die Webanwendung auf allen Geräten (Desktop, Smartphone und Tablet) einheitlich und optimal darzustellen.
 
 \subsection{PHP - Hypertext Preprocessor}
 \label{subsec:php}
@@ -156,7 +156,7 @@ Der Controller ist sowohl mit der View als auch mit dem Model verbunden. Sie rea
 \end{itemize}
 
 \newpage
-Die \textbf{Abbildung \ref{fig:mvc}} stellt grafisch die Kommunikationsverbindung der drei Komponenten in einem MVC-Entwurfsmuster dar.\bigskip
+Die \textbf{Abbildung \ref{fig:mvc}} stellt grafisch die Kommunikationsverbindung der drei Komponenten in einem MVC-Entwurfs\-muster dar.\bigskip
 
 \begin{figure}[H]
   \begin{center}
@@ -205,7 +205,7 @@ Die \textbf{Abbildung \ref{fig:web architektur}} zeigt die einzelnen Schichten d
 \label{sec:Serverseitige Implementierung}
 Die Serverapplikation wurde mit der WebSocket-Bibliothek namens Ratchet, welche schon im \textbf{Abschnitt \ref{subsce:Ratchet und Autobahn|JS}} erläutert wurde, umgesetzt. Der WebSocket-Server fungiert in dieser Webanwendung als Router, der die Informationen von einem Client zu anderen Clients in Echtzeit transferiert. Das \textbf{Listing \ref{lst:websocket-server}} stellt den WebSocket-Server dar, welcher in php implementiert wurde. Diese php-Datei muss vor jeder Anwendung ausgeführt werden, um den Server zu starten. Der Server ist über die IP-Adresse 127.0.0.1 und den Port 7070 aufrufbar. Damit die Clients die WebSockets-Verbindung aufbauen können, muss auf der Clientseite das Protokoll \glqq ws\grqq{}, die Adresse und der Port angegeben werden. Die Server-Adresse auf der Clientseite lautet somit \glqq ws://127.0.0.1:7070\grqq{}.\bigskip
 
-\begin{lstlisting}[caption={WebSocket-Server}, label=lst:websocket-server, captionpos=b]
+\begin{lstlisting}[caption={WebSocket-Server - php}, label=lst:websocket-server, captionpos=b]
 use Thruway\Peer\Router;
 use Thruway\Transport\RatchetTransportProvider;
 
@@ -270,7 +270,9 @@ Die Session ist erst gestartet, wenn der \glqq Session starten\grqq{}-Button auf
   \end{center}   
 \end{figure}
 
-Die Implementierung auf der Controller-Seite erfolgt mittels JavaScript \textbf{(Listing \ref{lst:Publish-Muster Controller-Seite})}. Die Variable \glqq controller\_topic\grqq{} beschreibt die URI des Workshops, über die eine Ressource identifiziert wird. Innerhalb der \glqq add\_controls\grqq{}-Funktion wurde ein Event-Handler für den \glqq Session starten\grqq{}-Button implementiert. Ein Event (Ereignis) wird ausgelöst, wenn der Button geklickt wird. Das id-Attribut \glqq session-list\grqq{} gibt den Bereich an, in dem sich der Button befindet. Das Button-Element selbst wird über das class-Attribut \glqq session-start\grqq{} angesprochen. Mit dem onclickt-Event wird dabei eine Funktion aufgerufen. In dieser Funktion wurde das Publish-Muster für die Verteilung der Nachrichten implementiert. Es wird dabei ein Objekt mit zwei Werten an die Abonnenten gesendet. Der Schlüssel \glqq stage\grqq{} mit dem Wert \glqq session\grqq{} gibt an, dass die Session gestartet ist. Auf die Session-Frage kann über den Schlüssel \glqq msg\grqq{} zugegriffen werden. Das Event-Listener \glqq connection.onopen\grqq{} indiziert, dass die Verbindung mit dem WebSocket-Server bereit ist, so dass man Informationen versenden und empfangen kann. Bei einem Verbindungsfehler oder wenn die Verbindung zum WebSocket geschlossen ist, wird auf der Konsole eine Warnung ausgegeben.
+Die Implementierung auf der Controller-Seite erfolgt mittels JavaScript \textbf{(Listing \ref{lst:Publish-Muster Controller-Seite})}. Die Variable \glqq controller\_topic\grqq{} beschreibt die URI des Workshops, über die eine Ressource identifiziert wird.\bigskip 
+
+Innerhalb der \glqq add\_controls\grqq{}-Funktion wurde ein Event-Handler für den \glqq Session starten\grqq{}-Button implementiert. Ein Event (Ereignis) wird ausgelöst, wenn der Button geklickt wird. Das id-Attribut \glqq session-list\grqq{} gibt den Bereich an, in dem sich der Button befindet. Das Button-Element selbst wird über das class-Attribut \glqq session-start\grqq{} angesprochen. Mit dem onclickt-Event wird dabei eine Funktion aufgerufen. In dieser Funktion wurde das Publish-Muster für die Verteilung der Nachrichten implementiert. Es wird dabei ein Objekt mit zwei Werten an die Abonnenten gesendet. Der Schlüssel \glqq stage\grqq{} mit dem Wert \glqq session\grqq{} gibt an, dass die Session gestartet ist. Auf die Session-Frage kann über den Schlüssel \glqq msg\grqq{} zugegriffen werden. Das Event-Listener \glqq connection.onopen\grqq{} indiziert, dass die Verbindung mit dem WebSocket-Server bereit ist, so dass man Informationen versenden und empfangen kann. Bei einem Verbindungsfehler oder wenn die Verbindung zum WebSocket geschlossen ist, wird auf der Konsole eine Warnung ausgegeben.
 
 \newpage
 \begin{lstlisting}[caption={Publish-Muster auf der Controller-Seite - JavaScript}, label=lst:Publish-Muster Controller-Seite, captionpos=b]
@@ -379,10 +381,9 @@ Das \textbf{Listing \ref{lst:html client}} beschreibt die HTML-Struktur der Teil
 Das \textbf{Listing \ref{lst:abschicken der daten}} beschreibt die \glqq add\_controls\grqq{}-Funktion im \textbf{Listing \ref{lst:Subscribe-Muster Teilnehmer-Seite}}. Diese Funktion sorgt auf der Teilnehmer-Seite dafür, dass die Daten nach dem Tätigen des Abschicken-Buttons bei der Präsentation-Seite ankommen. Das Eingabeformular wird in einem form-Tag definiert \textbf{(Listing \ref{lst:html client})}. Das Button-Element ist vom typ-Attribut \glqq submit\grqq{}, welches beim Klicken auf den Button ein submit-Event auslöst. Innerhalb der Funktion des submit-Events wird das Publish-Muster für die Verbreitung der eingegeben Daten implementiert. Über die Variable \glqq client\_topic\grqq{} im \textbf{Listing \ref{lst:Subscribe-Muster Teilnehmer-Seite}} wird die Teilnehmer-Seite (Publisher) identifiziert. Die Daten werden als ein Objekt (cardData) übermittelt. In diesem Objekt sind der Name des Absenders und seine eingegeben Daten enthalten. \bigskip
 
 \begin{lstlisting}[caption={Funktion für das Abschicken von Daten auf der Teilnehmer-Seite - JavaScript}, label=lst:abschicken der daten, captionpos=b]
-function add_controls(session) {
+function add_controls(session)
 	//submit-Event
 	$('#answer').on('submit',function(e) {
-		e.preventDefault();
 		//wenn der Benutzername leer ist, gibt eine Meldung aus, dass der Benutzername werden muss.
 		if (typeof username === 'undefined'){
         		alert("Username muss gesetzt werden");
@@ -395,13 +396,11 @@ function add_controls(session) {
             		'user_id': username,
             		'msg': msg
             },
-            
 		//Verbreite diese Information an seine Abonnenten
 		session.publish(client_topic, [cardData]);
 		$(this).find('').val('').focus();
 		$(this).find('textarea').val('').focus();
 	});
-}
 \end{lstlisting}
 
 Die Teilnehmer-Seite übernimmt im Prinzip zwei Rollen:
@@ -583,6 +582,7 @@ $(window).on('resize', function() {
 });
 \end{lstlisting}
 
+\newpage
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.2]{img/qrcode}

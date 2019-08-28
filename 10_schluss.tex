@@ -1,0 +1,30 @@
+\chapter{Schluss}
+\label{sec:schluss}
+Dieses Kapitel beschäftigt sich zunächst mit der Zusammenfassung der erarbeiteten Ergebnisse. Im Anschluss werden die Ideen für die zukünftige Erweiterung der Webanwendung vorgestellt.
+
+\section{Zusammenfassung}
+\label{sec:Zusammenfassung}
+Ziel dieser Bachelorarbeit war es, eine benutzerfreundliche, intuitiv bedienbare und einfach anzuwendende Webanwendung zur Durchführung von Workshops in Echtzeit zu entwickeln, die das klassische Brainstorming digitalisiert. Die zu entwickelnde Webanwendung soll dabei nicht die herkömmlichen Workshops ersetzen, sondern sie effektiver und einfacher  machen, in dem die Daten nicht mehr abgetippt oder abfotografiert werden, sondern digital zusammengefasst werden.\bigskip
+
+Dazu wurden zu Anfang im Kapitel \textbf{\ref{sec:grundlagen}} zunächst die für diese Arbeit nötigen Grundlagen erläutert. Im Kapitel \textbf{\ref{sec:analyse}} wurden zunächst die Konkurrenten analysiert. Daraus wurden dann die erkennbaren Stärken und Schwächen der Konkurrenten entwickelt. Danach ging es innerhalb dieses Kapitels weiter um die Anforderungsanalyse, welche aus funktionalen und nicht-funktionalen Anforderungen bestehen. Zum Schluss des Kapitels wurden die Muss- sowie Kann-Anforderungen festgelegt.\bigskip
+
+Aus den gesammelten Anforderungen konnte in Kapitel \textbf{\ref{sec:design}} mit der Konzeption begonnen werden. Zuerst wurden die Gestaltungsvorgaben, wie die Verwendung von Farben, die Schriftgestaltung sowie die Festlegung der verwendeten Icons erarbeitet. Danach wurde die Webanwendung anhand der Erstellung von Mockups entworfen. Das darauffolgende Kapitel \textbf{\ref{sec:implementierung}} wurde mit der Implementierung der Webanwendung begonnen. Dafür wurden als erstes die verwendeten Werkzeuge, die für die Implementierung angewendet wurden, vorgestellt. Des Weiteren wurden die Datenmodellierung und die Architektur der Webanwendung untersucht. Anschließend folgte die eigentliche Implementierung, welche in serverseitig und clientseitig aufgeteilt wurde. Während es bei der serverseitigen Implementierung vor allem um die Umsetzung des WebSocket-Servers ging, wird in der clientseitigen Implementierung beschrieben, wie die Nachrichten der Teilnehmer in Echtzeit dargestellt und wie die Ergebnisse in Kategorien zusammengefasst werden können. Die Bewertung der Webanwendung erfolgte im Kapitel \textbf{\ref{sec:bewertung}}. Für die Bewertung wurde dabei ein Fragebogen verwendet, das von vier Personen ausgefüllt wurde. 
+
+\section{Ausblick}
+\label{sec:Ausblick}
+Im Rahmen einer zukünftigen Weiterentwicklung könnte die Webanwendung um die im Folgenden beschriebenen Bereiche erweitert werden.
+
+\begin{itemize}
+\item \textbf{Registrierungsfunktion:}\\
+Bisher wird ein Benutzerkonto manuell in der Datenbank angelegt. Es gibt auf der Webanwendung noch keine Möglichkeit, sich zu registrieren. Von daher ist es wünschenswert, eine Registrierungsfunktion zu haben, so dass sich die moderierende Person zukünftig direkt bei der Webanwendung registrieren kann.
+\item \textbf{Vote-Funktion:}\\
+Während der Auswertungsphase sollte der Moderator zukünftig die Möglichkeit erhalten, die Ideen zu votieren. Eine Möglichkeit wäre, dass bei jeder Idee ein Gefällt-mir-Button implementiert wird, so dass der Moderator durch jedes Klicken auf diesen Button viele Likes abgeben kann. Dementsprechend sollten die Ideen auch nach Anzahl der Likes sortiert werden können.
+\item \textbf{Kategorien sollten nicht nur auf der Präsentation-Seite erstellt werden können:}\\
+Bisher können Kategorien nur auf der Präsentation-Seite erstellt werden, wenn die Ideensammlungsphase beendet ist. Als zukünftige Weiterentwicklung wäre es sinnvoll, dass der Moderator beim Erstellen der Session Kategorien anlegen können. Dementsprechend könnten die Teilnehmer bei der Abgabe ihrer Ideen einer Kategorie zuordnen. 
+\item \textbf{Eingegebene Daten bearbeiten:}\\
+Die eingegebenen Daten können bisher nicht bearbeitet werden. Somit wäre es für den Moderator optimal, die eingegebenen Daten bei Tippfehlern oder bei Unklarheiten editieren zu können. Die bearbeiteten Daten sollten sowohl auf der Präsentation-Seite als auch auf dem Ergebnisprotokoll ein Symbol haben, dass sie als bearbeitet anzeigt.
+\item \textbf{Im Ergebnisprotokoll sollte der Name vom Moderator stehen:}\\
+Als möglicher Erweiterungspunkt könnte der Name des Moderators im Ergebnisprotokoll aufgeführt werden.
+\item \textbf{Eingabe wieder aufnehmen:}\\
+Während die Session läuft, gibt es auf der Controller-Seite einen Button, der die Eingabe auf der Teilnehmer-Seite stoppt. Dies hat zur Folge, dass die Teilnehmer in diesem Moment keine Daten mehr eingeben können. Um in dieser Session Daten wieder eingeben zu können, muss die Session neu gestartet werden. Somit sollte in der Zukunft eine Funktion implementiert werden, dass sie die Eingabe auf der Teilnehmer-Seite erneut aufnimmt.
+\end{itemize}

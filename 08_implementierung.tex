@@ -150,7 +150,7 @@ Das Ziel dieses Entwurfsmusters ist es, eine interaktive Anwendung in drei Kompo
 \item \textbf{Model (M)}\\
 Das Model enthält die Anwendungsdaten, die dem Benutzer mithilfe der View repräsentiert werden. Bei einer Änderung des Models werden alle zugehörigen View über die Änderung benachrichtigt, so dass die Daten auch auf der View-Komponente aktualisiert werden.
 \item \textbf{View (V)}\\
-Die View  stellt dem Benutzer die Daten aus dem Model dar. Für das Model kann es mehrere Views geben. Dies hat vor allem den Vorteil, dass die Views andere Ausgaben generieren können.
+Die View stellt dem Benutzer die Daten aus dem Model dar. Für das Model kann es mehrere Views geben. Dies hat vor allem den Vorteil, dass die Views andere Ausgaben generieren können.
 \item \textbf{Controller (C)}\\
 Der Controller ist sowohl mit der View als auch mit dem Model verbunden. Sie reagiert auf Benutzeraktionen, manipuliert sie im Model und aktualisiert selbst in einigen Fällen auch die View. Jede Veränderung von Daten informiert der Controller dem Model und das Model wiederum setzt die View über die Datenänderung in Kenntnis, so dass die Daten aktualisiert werden können.
 \end{itemize}
@@ -382,21 +382,21 @@ Das \textbf{Listing \ref{lst:abschicken der daten}} beschreibt die \glqq add\_co
 
 \begin{lstlisting}[caption={Funktion für das Abschicken von Daten auf der Teilnehmer-Seite - JavaScript}, label=lst:abschicken der daten, captionpos=b]
 function add_controls(session)
-	//submit-Event
+	//Submit-Event
 	$('#answer').on('submit',function(e) {
-		//wenn der Benutzername leer ist, gibt eine Meldung aus, dass der Benutzername werden muss.
+		//Wenn der Benutzername leer ist, wird eine Meldung ausgegeben, dass der Benutzername eingegeben werden muss.
 		if (typeof username === 'undefined'){
         		alert("Username muss gesetzt werden");
             return;
    		}
 		//Die Variable 'msg' wird mit den eingegebenen Daten initialisiert.
 		var msg = $(this).find('textarea').val(),
-		//Daten sowie Benutzernamen werden in einem Objekt gekapselt.
+		//Daten sowie Benutzernamen werden in einem Objekt gespeichert.
 			cardData = {
             		'user_id': username,
             		'msg': msg
             },
-		//Verbreite diese Information an seine Abonnenten
+		//Verbreite die Nachricht an seine Abonnenten
 		session.publish(client_topic, [cardData]);
 		$(this).find('').val('').focus();
 		$(this).find('textarea').val('').focus();
@@ -418,7 +418,7 @@ Die Präsentation-Seite muss den \glqq client\_topic\grqq{} abonnieren, um die N
 \begin{lstlisting}[caption={Subscribe-Muster auf der Präsentation-Seite - JavaScript}, label=lst:subscribe auf der Präsentation-Seite, captionpos=b]
 //Verbindung zum WebSocket ist geöffnet
 connection.onopen = function(session, details) {
-	//Abonniere die Teilnehmer-Seite, um die eingegeben Daten zu erhalten
+	//Abonniere die Teilnehmer-Seite, um die eingegebenen Daten zu erhalten
 	session.subscribe(client_topic, function (args) {
 		//Funktion zur Darstellung der Daten
     		add_card(args[0]);
@@ -426,12 +426,12 @@ connection.onopen = function(session, details) {
 };
 \end{lstlisting}
 
-Die Funktion \glqq add\_card\grqq{}, welche im \textbf{Listing \ref{lst:subscribe auf der Präsentation-Seite}} zu sehen ist, wird im \textbf{Listing \ref{lst:add_card}} detailliert vorgestellt. Die empfangenen Daten werden wie eine Karte auf der Präsentation-Seite dargestellt. Auf dieser Karte sind der Benutzername (user\_id) und dahinter die Nachricht (msg) zu sehen. Als Gestaltungsvorlage wird die Klasse \glqq alert\grqq{} und \glqq alert-warning\grqq{} vom Bootstrap verwendet. Die Daten werden in einem Array namens \glqq cards\grqq{} gespeichert. Mit Hilfe der JQuery-Methode \glqq append\grqq{} werden die Daten im Bereich \glqq message\_output\grqq{} auf der Präsentation-Seite dargestellt \textbf{(Abbildung \ref{fig:Präsentation-Seite final})}.\bigskip
+Die Funktion \glqq add\_card\grqq{}, welche im \textbf{Listing \ref{lst:subscribe auf der Präsentation-Seite}} zu sehen ist, wird im \textbf{Listing \ref{lst:add_card}} detailliert vorgestellt. Die empfangenen Daten werden wie eine Karte auf der Präsentation-Seite dargestellt. Auf dieser Karte sind der Benutzername (user\_id) und dahinter die Nachricht (msg) zu sehen. Als Gestaltungsvorlage werden die Klasse \glqq alert\grqq{} und \glqq alert-warning\grqq{} vom Bootstrap verwendet. Die Daten werden in einem Array namens \glqq cards\grqq{} gespeichert. Mit Hilfe der JQuery-Methode \glqq append\grqq{} werden die Daten im Bereich \glqq message\_output\grqq{} auf der Präsentation-Seite dargestellt \textbf{(Abbildung \ref{fig:Präsentation-Seite final})}.\bigskip
 
 \begin{lstlisting}[caption={Funktion zur Visualisieren der Daten auf der Präsentation-Seite - JavaScript}, label=lst:add_card, captionpos=b]
 function add_card(data) {
 	var card = $('<div data-index="' + index +'" class="alert alert-warning"><p><b>' + htmlDecode(data.user_id) + ':</b> ' + htmlDecode(data.msg) + '</p></div>'),
-	//Speichert die Daten in einem Arrey namens cards
+	//Die Daten werden in einem Arrey namens cards gespeichert
 	cards.push(data);
     $('#message_output').append(card);
 }
@@ -449,7 +449,7 @@ function add_card(data) {
 \newpage
 \subsection{Daten in Kategorien zusammenfassen}
 \label{subsec:Daten in Kategorien zusammenfassen}
-Die auf der Präsentation-Seite befindlichen Daten können erst in Kategorien zusammengefasst werden, wenn die Ideensammlungsphase vorüber ist. Das bedeutet, dass der \glqq Eingabe beenden\grqq{}-Button auf der Controller-Seite getätigt werden muss \textbf{(Abbildung \ref{fig:controller-Seite mit session final})}. Durch das Klicken auf diesen Buttons wird auf der Präsentation-Seite ein neuer Button namens \glqq Kategorien erstellen\grqq{} eingeblendet und die Eingabe auf der Teilnehmer-Seite wird dabei gestoppt. Es können demzufolge keine weiteren Daten mehr eingegeben werden. 
+Die auf der Präsentation-Seite befindlichen Daten können erst in Kategorien zusammengefasst werden, wenn die Ideensammlungsphase vorüber ist. Das bedeutet, dass der \glqq Eingabe beenden\grqq{}-Button auf der Controller-Seite getätigt werden muss \textbf{(Abbildung \ref{fig:controller-Seite mit session final})}. Durch das Klicken auf diesen Button wird auf der Präsentation-Seite ein neuer Button namens \glqq Kategorien erstellen\grqq{} eingeblendet und die Eingabe auf der Teilnehmer-Seite wird dabei gestoppt. Es können demzufolge keine weiteren Daten mehr eingegeben werden. 
 
 \bigskip
 \begin{figure}[H]
@@ -462,7 +462,7 @@ Die auf der Präsentation-Seite befindlichen Daten können erst in Kategorien zu
 \end{figure}
 
 \newpage
-Das \textbf{Listing \ref{lst:html präsentation-seite}} stellt den Aufbau des Inhaltsbereiches auf der Präsentation-Seite dar. Bei der Session-Frage handelt es sich, wie bei der Teilnehmer-Seite, um eine Überschrift zweiter Ordnung. Die eingegebenen Daten befinden sich innerhalb des div-Elements mit der Id \glqq message\_output\grqq{}. Das div-Element ist ein Bereich, in welchem Elemente eingeschlossen werden. Die erstellten Kategorien werden im Bereich \glqq category\_output\grqq{} dargestellt. Der Titel einer Kategorie kann durch das Anklicken auf den Bereich \glqq Kategorie-Titel\grqq{} verändert werden. Die Kategorie wurde mit Hilfe von JavaScript umgesetzt, wie im \textbf{Listing \ref{lst:kategorie umsetzen}} zu sehen ist. Gespeichert werden sie in einem Array namens \glqq categories\grqq{}. Über das Id-Attribut werden die Kategorien angesprochen.\bigskip
+Das \textbf{Listing \ref{lst:html präsentation-seite}} stellt den Aufbau des Inhaltsbereiches auf der Präsentation-Seite dar. Bei der Session-Frage handelt es sich, wie auf der Teilnehmer-Seite, um eine Überschrift zweiter Ordnung. Die eingegebenen Daten befinden sich innerhalb des div-Elements mit der Id \glqq message\_output\grqq{}. Das div-Element ist ein Bereich, in welchem Elemente eingeschlossen werden. Die erstellten Kategorien werden im Bereich \glqq category\_output\grqq{} dargestellt. Der Titel einer Kategorie kann durch das Anklicken auf den Bereich \glqq Kategorie-Titel\grqq{} verändert werden. Die Kategorie wurde mit Hilfe von JavaScript umgesetzt, wie im \textbf{Listing \ref{lst:kategorie umsetzen}} zu sehen ist. Gespeichert werden sie in einem Array namens \glqq categories\grqq{}. Über das Id-Attribut werden die Kategorien angesprochen.\bigskip
 
 \begin{lstlisting}[caption={HTML-Struktur der Präsentation-Seite}, label=lst:html präsentation-seite, captionpos=b]
 <div class="container-fluid stage" id="stage-session">
@@ -498,6 +498,7 @@ function add_category(data) {
 \end{lstlisting}
 \bigskip
 
+\newpage
 Innerhalb der \glqq add\_category\grqq{}-Funktion im \textbf{Listing \ref{lst:kategorie umsetzen}} ist eine Funktion namens \glqq initSortable\grqq{} zu sehen. In dieser Funktion wird das Sortable Widgets von JQuery UI implementiert, um die Daten in Kategorien zusammenfassen zu können \textbf{(Listing \ref{lst:sortierfunktion})}.\bigskip
 
 \begin{lstlisting}[caption={Sortierfunktion auf der Präsentation-Seite - JavaScript}, label=lst:sortierfunktion, captionpos=b]
@@ -538,7 +539,7 @@ function initSortable(id) {
 			ui.placeholder.css({visibility: 'visible', border: '2px solid yellow'});
 			//Hier beginnt die Iteration durch dem 'cards'-Array, wo die Elemente gespeichert sind.
 			cards.forEach(function (item) {
-				//Jedes Element in einer Kategorie bekommt die Id von der entsprechenden Kategorie als neue Werte gespeichet.
+				//Jedes Item in einer Kategorie bekommt die Id von der entsprechenden Kategorie als neue Werte gespeichert.
 				item.category = $(event.target).attr('data-category');
 			});
 		}

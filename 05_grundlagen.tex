@@ -220,7 +220,6 @@ Beim Long Polling wird der Server ebenfalls angefragt. Anders als beim Polling w
   \end{center}   
 \end{figure}
 
-\newpage
 Damit der Client und Server mit möglichst geringen Latenzen kommunizieren können, wird dafür eine bidirektionale Kommunikation benötigt. Mit dieser Art der Kommunikation können Daten in beide Richtungen gleichzeitig übertragen werden. Man bezeichnet diese Kommunikationsart als Vollduplex. Im Gegensatz zu Vollduplex erlaubt das Halbduplex-Verfahren keine gleichzeitige Kommunikation in beide Richtungen (vgl. \cite{Wiki2018}).\bigskip
 
 \par
@@ -239,9 +238,8 @@ WebSocket wurde 2008 entwickelt. \glqq Chrome war 2009 der erste Browser, der We
 
 WebSocket ist ein bidirektionaler und vollduplexer Kommunikationsstandard, der entwickelt wurde, \glqq[...] um eine bidirektionale Verbindung zwischen einer Webanwendung und einem WebSocket-Server bzw. einem Webserver, der auch WebSockets unterstützt, herzustellen.\grqq{} \cite{Wiki2019}\bigskip
 
-Mit WebSocket werden Daten in beide Richtungen über einen Kommunikationskanal übertragen. Client und Server können gleichzeitig miteinander \glqq reden\grqq{}, sobald eine WebSocket-Verbindung besteht. WebSocket verwendet den gleichen Port wie HTTP, nämlich den Port 80. Es wird dabei ein WebSocket-Protokoll namens \textbf {Handshake} benutzt, um die Verbindung zwischen Client und Server aufzubauen. (vgl. \cite{Matt2011})
+Mit WebSocket werden Daten in beide Richtungen über einen Kommunikationskanal übertragen. Client und Server können gleichzeitig miteinander \glqq reden\grqq{}, sobald eine WebSocket-Verbindung besteht. WebSocket verwendet den gleichen Port wie HTTP, nämlich den Port 80. Es wird dabei ein WebSocket-Protokoll namens \textbf {Handshake} benutzt, um die Verbindung zwischen Client und Server aufzubauen. (vgl. \cite{Matt2011})\bigskip
 
-\newpage
 Das Handshake-Verfahren funktioniert wie folgt:\bigskip
 
 \textbf{Client:}
@@ -325,6 +323,7 @@ Das PubSub-Muster besteht aus einem Publisher (Verteiler) und vielen Subscribers
   \end{center}   
 \end{figure}
 
+\newpage
 Dabei werden die Topics im WAMP Protokoll über eine sogenannte Uniform Ressource Identifier (URI) beschrieben\footnote{vgl. \url{https://crossbar.io/docs/URI-Format/}}, wie zum Beispiel:
 \begin{itemize}
 \item com.myapp.topicA
@@ -346,7 +345,7 @@ Neben dem PubSub-Muster unterstützt das WAMP Protokoll auch das Remote Procedur
 
 Die \textbf{Abbildung \ref{fig:rpc}} beschreibt den Ablauf einer RPC-Anfrage im WAMP Protokoll. Dabei ist zu erkennen, dass auch beim RPC-Muster einen Router zum Einsatz kommt, der Anrufe entgegennimmt. Nachdem der Router einen Anruf erhalten hat, leitet er diesen Anruf an den entsprechenden Angerufenen (Callee) weiter. Dieser Angerufene bearbeitet die empfangenen Anfragen und sendet die Ergebnisse an den Router, der sie direkt an den Anrufer (Caller) weiterleitet. Um dem Router die Adresse des Angerufenen mitzuteilen, muss eine entfernte Prozedur beim Router registriert werden. Somit müssen weder der Anrufer (Caller) noch der Angerufene (Callee) die Adresse des anderen Teilnehmers kennen.\bigskip
 
-Das in WAMP verwendete Standard-Transportprotokoll ist Websocket. Mit Websocket-Transport ist es möglich, eine dauerhafte bidirektionale Verbindung herzustellen. WAMP ist nicht auf die Unterstützung von Webanwendungen beschränkt. Es ist eine geeignete Lösung für verteilte Anwendungen. Ein besonderer Vorteil des WAMP ist, dass es die Trennung von Komponenten unterstützt, die miteinander kommunizieren müssen. Eine direkte Kommunikation ist nicht erforderlich, da der. Router die Nachrichtenverteilung übernimmt. Außerdem ist WAMP sprachunabhängig, daher beschränkt es sich nicht auf eine bestimmte Programmiersprache. (vgl. \cite{edu2018})
+Das in WAMP verwendete Standard-Transportprotokoll ist Websocket. Mit Websocket-Transport ist es möglich, eine dauerhafte bidirektionale Verbindung herzustellen. WAMP ist nicht auf die Unterstützung von Webanwendungen beschränkt. Es ist eine geeignete Lösung für verteilte Anwendungen. Ein besonderer Vorteil des WAMP ist, dass es die Trennung von Komponenten unterstützt, die miteinander kommunizieren müssen. Eine direkte Kommunikation ist nicht erforderlich, da der Router die Nachrichtenverteilung übernimmt. Außerdem ist WAMP sprachunabhängig, daher beschränkt es sich nicht auf eine bestimmte Programmiersprache. (vgl. \cite{edu2018})
 
 \end{itemize}
 
@@ -455,6 +454,8 @@ Außerdem stellte O’Reilly sieben Merkmale vor, die kennzeichnend für Web 2.0
 \begin{itemize}
 \item Geräteunabhängige Anwendungen, z.B. nicht nur für den PC sondern auch mobile Geräte.
 \end{itemize}
+
+\newpage
 \item \textbf{Rich User Experiences:}
 \begin{itemize}
 \item Benutzerführung mit interaktiver Benutzeroberfläche, die sich kaum von einem Desktop-Programm unterscheiden.
